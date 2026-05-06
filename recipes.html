@@ -12,7 +12,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
     
     <script src="tailwind.js"></script>
     <script>
@@ -114,11 +114,13 @@
             visibility: hidden;
             transform: translateY(15px);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
         }
         .group:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
             transform: translateY(0);
+            pointer-events: auto;
         }
 
         /* --- MOBILE MENU --- */
@@ -151,11 +153,16 @@
         .dropdown-arrow { transition: transform 0.3s ease; }
         .mobile-dropdown-btn.active .dropdown-arrow { transform: rotate(180deg); }
 
-        /* Scrollbar */
+        /* Scrollbars */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--bg-color); }
         ::-webkit-scrollbar-thumb { background: #E09F3E; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #9C6644; }
+
+        /* FAQ specific transition */
+        .faq-content {
+            transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, padding 0.4s ease-in-out;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -168,13 +175,13 @@
                     <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(224,159,62,0.4)] transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 shrink-0">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
-                    <span class="font-serif text-2xl font-bold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap">Pasta<span class="text-primary">Perfetto</span></span>
+                    <span class="font-serif text-2xl font-semibold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap">Pasta<span class="text-primary">Perfetto</span></span>
                 </a>
 
                 <div class="hidden xl:flex items-center space-x-4 2xl:space-x-8 rtl:space-x-reverse mr-4 2xl:mr-8">
                     <div class="relative group cursor-pointer py-6 shrink-0">
                         <span class="nav-link flex items-center gap-1 cursor-pointer">Home <i class="fas fa-chevron-down text-xs ml-1"></i></span>
-                        <div class="dropdown-menu absolute top-full left-0 rtl:right-0 rtl:left-auto mt-[-10px] w-48 bg-[var(--bg-color)] border border-[var(--border-color)] shadow-xl rounded-xl overflow-hidden z-50">
+                        <div class="dropdown-menu absolute z-50 top-full ltr:left-0 rtl:right-0 mt-[-10px] w-48 bg-[var(--bg-color)] border border-[var(--border-color)] shadow-xl rounded-xl overflow-hidden">
                             <a href="index.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors border-b border-[var(--border-color)] font-medium">Home 1</a>
                             <a href="home-2.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors font-medium">Home 2</a>
                         </div>
@@ -191,7 +198,7 @@
 
                     <div class="relative group cursor-pointer py-6 shrink-0">
                         <span class="nav-link flex items-center gap-1 cursor-pointer">Dashboard <i class="fas fa-chevron-down text-xs ml-1"></i></span>
-                        <div class="dropdown-menu absolute top-full right-0 rtl:left-0 rtl:right-auto mt-[-10px] w-48 bg-[var(--bg-color)] border border-[var(--border-color)] shadow-xl rounded-xl overflow-hidden z-50">
+                        <div class="dropdown-menu absolute z-50 top-full ltr:right-0 rtl:left-0 mt-[-10px] w-48 bg-[var(--bg-color)] border border-[var(--border-color)] shadow-xl rounded-xl overflow-hidden">
                             <a href="user-dashboard.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors border-b border-[var(--border-color)] font-medium"><i class="fas fa-user mx-2"></i> User</a>
                             <a href="admin-dashboard.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors font-medium"><i class="fas fa-shield-halved mx-2"></i> Admin</a>
                         </div>
@@ -199,7 +206,7 @@
                 </div>
 
                 <div class="flex items-center gap-3 xl:gap-5 2xl:gap-8 shrink-0">
-                    <button class="rtl-toggle-btn hidden xl:flex w-10 h-10 shrink-0 rounded-full items-center justify-center border border-[var(--border-color)] hover:bg-primary hover:text-white hover:border-primary transition-all font-bold text-xs hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] text-[var(--text-color)]">
+                    <button class="rtl-toggle-btn hidden xl:flex w-10 h-10 shrink-0 rounded-full items-center justify-center border border-[var(--border-color)] hover:bg-primary hover:text-white hover:border-primary transition-all font-medium text-xs hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] text-[var(--text-color)]">
                         RTL
                     </button>
 
@@ -208,8 +215,9 @@
                     </button>
 
                     <div class="hidden xl:flex items-center gap-4 2xl:gap-6 shrink-0 ml-1">
-                        <a href="login.html" class="font-bold text-[var(--text-color)] hover:text-primary transition-colors hover:scale-105 whitespace-nowrap">Login</a>
-                        <a href="register.html" class="bg-primary text-white px-4 2xl:px-5 py-2.5 rounded-full font-bold hover:bg-secondary transition-colors shadow-md hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Register</a>
+                        <!-- Restored orange border and orange text -->
+                        <a href="login.html" class="border-2 border-primary text-primary px-5 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-sm hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Login</a>
+                        <a href="register.html" class="bg-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-secondary transition-colors shadow-md hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Register</a>
                     </div>
 
                     <button id="mobile-menu-btn" class="flex xl:hidden w-12 h-12 shrink-0 items-center justify-center text-[var(--text-color)] hover:text-primary transition-colors bg-transparent border-0 cursor-pointer rounded-lg hover:bg-primary/10">
@@ -229,11 +237,11 @@
                     <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_10px_rgba(224,159,62,0.5)] transition-transform duration-300">
                         <i class="fa-solid fa-wheat-awn text-xs"></i>
                     </div>
-                    <span class="font-serif text-lg font-bold tracking-wide text-[var(--text-color)] hidden sm:block">Pasta<span class="text-primary">Perfetto</span></span>
+                    <span class="font-serif text-lg font-semibold tracking-wide text-[var(--text-color)] hidden sm:block">Pasta<span class="text-primary">Perfetto</span></span>
                 </a>
                 
                 <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                    <button class="rtl-toggle-btn w-8 h-8 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[10px] font-bold text-[var(--text-color)] hover:bg-primary hover:text-white hover:border-primary transition-colors shadow-sm">
+                    <button class="rtl-toggle-btn w-8 h-8 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[10px] font-medium text-[var(--text-color)] hover:bg-primary hover:text-white hover:border-primary transition-colors shadow-sm">
                         RTL
                     </button>
                     <button class="theme-toggle w-8 h-8 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[var(--text-color)] hover:bg-primary hover:text-white hover:border-primary transition-colors shadow-sm">
@@ -250,7 +258,7 @@
             
             <div class="flex-grow overflow-y-auto pb-4">
                 <div>
-                    <button class="mobile-dropdown-btn flex items-center justify-between w-full text-left font-serif text-base py-1.5 text-[var(--text-color)] hover:text-primary transition-colors cursor-pointer border-0 bg-transparent font-bold" onclick="toggleMobileDropdown(this, 'home-mobile')">
+                    <button class="mobile-dropdown-btn flex items-center justify-between w-full text-left font-serif text-base py-1.5 text-[var(--text-color)] hover:text-primary transition-colors cursor-pointer border-0 bg-transparent font-semibold" onclick="toggleMobileDropdown(this, 'home-mobile')">
                         <span>Home</span>
                         <i class="fas fa-chevron-down dropdown-arrow text-xs text-[var(--text-muted)]"></i>
                     </button>
@@ -260,17 +268,17 @@
                     </div>
                 </div>
                 
-                <a href="about.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">About</a>
-                <a href="product.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Product</a>
-                <a href="pasta.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Pasta</a>
-                <a href="sauce.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Sauce</a>
-                <a href="recipes.html" class="block font-serif text-base py-1.5 font-bold text-primary transition-transform">Recipes</a>
-                <a href="pricing.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Pricing</a>
-                <a href="faq.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">FAQ</a>
-                <a href="contact.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Contact</a>
+                <a href="about.html" class="block font-serif text-base py-1.5 font-semibold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">About</a>
+                <a href="product.html" class="block font-serif text-base py-1.5 font-semibold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Product</a>
+                <a href="pasta.html" class="block font-serif text-base py-1.5 font-semibold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Pasta</a>
+                <a href="sauce.html" class="block font-serif text-base py-1.5 font-semibold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Sauce</a>
+                <a href="recipes.html" class="block font-serif text-base py-1.5 font-semibold text-primary transition-transform">Recipes</a>
+                <a href="pricing.html" class="block font-serif text-base py-1.5 font-semibold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Pricing</a>
+                <a href="faq.html" class="block font-serif text-base py-1.5 font-semibold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">FAQ</a>
+                <a href="contact.html" class="block font-serif text-base py-1.5 font-semibold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Contact</a>
                 
                 <div>
-                    <button class="mobile-dropdown-btn flex items-center justify-between w-full text-left font-serif text-base py-1.5 text-[var(--text-color)] hover:text-primary transition-colors cursor-pointer border-0 bg-transparent font-bold" onclick="toggleMobileDropdown(this, 'dashboard-mobile')">
+                    <button class="mobile-dropdown-btn flex items-center justify-between w-full text-left font-serif text-base py-1.5 text-[var(--text-color)] hover:text-primary transition-colors cursor-pointer border-0 bg-transparent font-semibold" onclick="toggleMobileDropdown(this, 'dashboard-mobile')">
                         <span>Dashboard</span>
                         <i class="fas fa-chevron-down dropdown-arrow text-xs text-[var(--text-muted)]"></i>
                     </button>
@@ -281,7 +289,7 @@
                 </div>
 
                 <div class="pt-4 mt-2 shrink-0 border-t border-theme">
-                    <a href="register.html" class="bg-primary border-2 border-primary text-white w-full py-2.5 rounded-xl font-bold text-base transition-all hover:bg-secondary hover:border-secondary flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(224,159,62,0.4)]">
+                    <a href="register.html" class="bg-primary border-2 border-primary text-white w-full py-2.5 rounded-xl font-semibold text-base transition-all hover:bg-secondary hover:border-secondary flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(224,159,62,0.4)]">
                         <i class="fas fa-user-plus"></i> Register
                     </a>
                 </div>
@@ -295,8 +303,8 @@
         <section class="relative min-h-[100dvh] flex items-center justify-center pt-20 border-b border-theme" style="background-image: url('Images/Cacio\ e\ Pepe.jpg'); background-size: cover; background-position: center;">
             <div class="absolute inset-0 bg-black/60 dark:bg-black/80 z-0 transition-colors duration-300"></div>
             <div class="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center h-full">
-                <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-3 block drop-shadow-md animate-pulse w-full text-center">Culinary Inspiration</span>
-                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)] mb-6 w-full text-center">
+                <span class="text-primary font-medium tracking-[0.2em] uppercase text-sm md:text-base mb-3 block drop-shadow-md animate-pulse w-full text-center">Culinary Inspiration</span>
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)] mb-6 w-full text-center">
                     Master the Art of <br/> <span class="italic text-primary">Italian Cooking</span>.
                 </h1>
                 <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-medium drop-shadow-md text-center w-full">
@@ -310,8 +318,8 @@
             
             <div class="container mx-auto px-4 md:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center justify-center">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm block mb-3 text-center w-full">Browse by Mood</span>
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-[var(--text-color)] text-center w-full">Recipe Categories</h2>
+                    <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-3 text-center w-full">Browse by Mood</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-semibold text-primary mb-6 leading-tight w-full text-center">Recipe Categories</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -319,7 +327,7 @@
                         <div class="w-20 h-20 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-6 border border-primary/20 group-hover:bg-primary transition-colors">
                             <i class="fas fa-bolt text-3xl text-primary group-hover:text-white transition-colors"></i>
                         </div>
-                        <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors text-center w-full">Quick & Easy</h3>
+                        <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors text-center w-full">Quick & Easy</h3>
                         <p class="text-body-muted font-medium text-sm text-center w-full">Under 20 Minutes</p>
                     </a>
 
@@ -327,7 +335,7 @@
                         <div class="w-20 h-20 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-6 border border-primary/20 group-hover:bg-primary transition-colors">
                             <i class="fas fa-wine-glass text-3xl text-primary group-hover:text-white transition-colors"></i>
                         </div>
-                        <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors text-center w-full">Gourmet</h3>
+                        <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors text-center w-full">Gourmet</h3>
                         <p class="text-body-muted font-medium text-sm text-center w-full">Weekend Feasts</p>
                     </a>
 
@@ -335,7 +343,7 @@
                         <div class="w-20 h-20 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-6 border border-primary/20 group-hover:bg-primary transition-colors">
                             <i class="fas fa-leaf text-3xl text-primary group-hover:text-white transition-colors"></i>
                         </div>
-                        <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors text-center w-full">Vegetarian</h3>
+                        <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors text-center w-full">Vegetarian</h3>
                         <p class="text-body-muted font-medium text-sm text-center w-full">Plant-Based Perfection</p>
                     </a>
                 </div>
@@ -346,7 +354,7 @@
             <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10 pointer-events-none"></div>
             <div class="container mx-auto px-4 relative z-10 flex flex-col items-center text-center">
                 <i class="fas fa-star-of-life text-4xl md:text-5xl mb-8 animate-pulse text-white/80"></i>
-                <h2 class="font-serif text-4xl md:text-6xl font-bold mb-8 max-w-4xl leading-tight drop-shadow-md w-full text-center">
+                <h2 class="font-serif text-4xl md:text-6xl font-semibold mb-8 max-w-4xl leading-tight drop-shadow-md w-full text-center text-white">
                     "Simplicity is the ultimate sophistication. Great pasta needs no disguise."
                 </h2>
                 <p class="text-lg md:text-xl font-medium max-w-2xl text-white/90 mb-10 w-full text-center">
@@ -361,8 +369,8 @@
                 
                 <div class="flex flex-col items-center justify-center mb-16 gap-6 text-center w-full">
                     <div class="w-full flex flex-col items-center">
-                        <span class="text-primary font-bold tracking-widest uppercase text-sm block mb-3 text-center">All Recipes</span>
-                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-[var(--text-color)] text-center">Latest Creations</h2>
+                        <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-3 text-center w-full">All Recipes</span>
+                        <h2 class="font-serif text-4xl md:text-5xl font-semibold text-primary w-full text-center">Latest Creations</h2>
                     </div>
                     <div class="flex items-center justify-center bg-card border border-theme rounded-full px-6 py-3 shadow-sm w-full max-w-md mx-auto hover:border-primary transition-colors">
                         <i class="fas fa-search text-body-muted mr-3"></i>
@@ -374,92 +382,92 @@
                     
                     <div class="bg-card rounded-3xl p-8 border border-theme shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col items-center text-center h-full relative">
                         <div class="w-full flex justify-between items-start mb-6">
-                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-bold text-primary border border-theme shadow-sm">Quick & Easy</div>
+                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-medium text-primary border border-theme shadow-sm">Quick & Easy</div>
                             <div class="w-10 h-10 bg-[var(--bg-color)] rounded-full flex items-center justify-center text-body-muted hover:text-primary border border-theme shadow-sm cursor-pointer transition-colors"><i class="far fa-heart"></i></div>
                         </div>
-                        <div class="flex items-center justify-center gap-4 text-xs font-bold text-body-muted uppercase tracking-wider mb-4 w-full">
+                        <div class="flex items-center justify-center gap-4 text-xs font-medium text-body-muted uppercase tracking-wider mb-4 w-full">
                             <span><i class="far fa-clock text-primary mr-1"></i> 15 Min</span>
                             <span><i class="fas fa-signal text-primary mr-1"></i> Easy</span>
                         </div>
-                        <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Spicy Penne Arrabbiata</h3>
+                        <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Spicy Penne Arrabbiata</h3>
                         <p class="text-body-muted font-medium mb-8 flex-grow w-full">A fiery classic using our bronze-die Penne Rigate and signature spicy tomato sauce.</p>
-                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-bold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-semibold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                     <div class="bg-card rounded-3xl p-8 border border-theme shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col items-center text-center h-full relative">
                         <div class="w-full flex justify-between items-start mb-6">
-                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-bold text-primary border border-theme shadow-sm">Gourmet</div>
+                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-medium text-primary border border-theme shadow-sm">Gourmet</div>
                             <div class="w-10 h-10 bg-[var(--bg-color)] rounded-full flex items-center justify-center text-body-muted hover:text-primary border border-theme shadow-sm cursor-pointer transition-colors"><i class="far fa-heart"></i></div>
                         </div>
-                        <div class="flex items-center justify-center gap-4 text-xs font-bold text-body-muted uppercase tracking-wider mb-4 w-full">
+                        <div class="flex items-center justify-center gap-4 text-xs font-medium text-body-muted uppercase tracking-wider mb-4 w-full">
                             <span><i class="far fa-clock text-primary mr-1"></i> 45 Min</span>
                             <span><i class="fas fa-signal text-primary mr-1"></i> Hard</span>
                         </div>
-                        <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Tonnarelli Cacio e Pepe</h3>
+                        <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Tonnarelli Cacio e Pepe</h3>
                         <p class="text-body-muted font-medium mb-8 flex-grow w-full">Master the emulsion. Only three ingredients stand between you and Roman perfection.</p>
-                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-bold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-semibold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                     <div class="bg-card rounded-3xl p-8 border border-theme shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col items-center text-center h-full relative">
                         <div class="w-full flex justify-between items-start mb-6">
-                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-bold text-primary border border-theme shadow-sm">Vegetarian</div>
+                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-medium text-primary border border-theme shadow-sm">Vegetarian</div>
                             <div class="w-10 h-10 bg-[var(--bg-color)] rounded-full flex items-center justify-center text-body-muted hover:text-primary border border-theme shadow-sm cursor-pointer transition-colors"><i class="far fa-heart"></i></div>
                         </div>
-                        <div class="flex items-center justify-center gap-4 text-xs font-bold text-body-muted uppercase tracking-wider mb-4 w-full">
+                        <div class="flex items-center justify-center gap-4 text-xs font-medium text-body-muted uppercase tracking-wider mb-4 w-full">
                             <span><i class="far fa-clock text-primary mr-1"></i> 20 Min</span>
                             <span><i class="fas fa-signal text-primary mr-1"></i> Easy</span>
                         </div>
-                        <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Fresh Pesto Fusilli</h3>
+                        <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Fresh Pesto Fusilli</h3>
                         <p class="text-body-muted font-medium mb-8 flex-grow w-full">Vibrant basil pesto tossed with fresh fusilli that captures every drop of herbaceous oil.</p>
-                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-bold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-semibold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                     <div class="bg-card rounded-3xl p-8 border border-theme shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col items-center text-center h-full relative">
                         <div class="w-full flex justify-between items-start mb-6">
-                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-bold text-primary border border-theme shadow-sm">Gourmet</div>
+                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-medium text-primary border border-theme shadow-sm">Gourmet</div>
                             <div class="w-10 h-10 bg-[var(--bg-color)] rounded-full flex items-center justify-center text-body-muted hover:text-primary border border-theme shadow-sm cursor-pointer transition-colors"><i class="far fa-heart"></i></div>
                         </div>
-                        <div class="flex items-center justify-center gap-4 text-xs font-bold text-body-muted uppercase tracking-wider mb-4 w-full">
+                        <div class="flex items-center justify-center gap-4 text-xs font-medium text-body-muted uppercase tracking-wider mb-4 w-full">
                             <span><i class="far fa-clock text-primary mr-1"></i> 30 Min</span>
                             <span><i class="fas fa-signal text-primary mr-1"></i> Medium</span>
                         </div>
-                        <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Truffle Cream Pappardelle</h3>
+                        <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Truffle Cream Pappardelle</h3>
                         <p class="text-body-muted font-medium mb-8 flex-grow w-full">Decadent earthy truffles folded into heavy cream and wide egg pasta ribbons.</p>
-                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-bold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-semibold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                     <div class="bg-card rounded-3xl p-8 border border-theme shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col items-center text-center h-full relative">
                         <div class="w-full flex justify-between items-start mb-6">
-                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-bold text-primary border border-theme shadow-sm">Vegetarian</div>
+                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-medium text-primary border border-theme shadow-sm">Vegetarian</div>
                             <div class="w-10 h-10 bg-[var(--bg-color)] rounded-full flex items-center justify-center text-body-muted hover:text-primary border border-theme shadow-sm cursor-pointer transition-colors"><i class="far fa-heart"></i></div>
                         </div>
-                        <div class="flex items-center justify-center gap-4 text-xs font-bold text-body-muted uppercase tracking-wider mb-4 w-full">
+                        <div class="flex items-center justify-center gap-4 text-xs font-medium text-body-muted uppercase tracking-wider mb-4 w-full">
                             <span><i class="far fa-clock text-primary mr-1"></i> 25 Min</span>
                             <span><i class="fas fa-signal text-primary mr-1"></i> Easy</span>
                         </div>
-                        <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Ricotta Ravioli & Sage</h3>
+                        <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Ricotta Ravioli & Sage</h3>
                         <p class="text-body-muted font-medium mb-8 flex-grow w-full">Let the pasta shine. Simple brown butter and crispy sage leaves over plump ravioli.</p>
-                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-bold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-semibold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                     <div class="bg-card rounded-3xl p-8 border border-theme shadow-sm hover:shadow-xl hover:border-primary transition-all duration-300 group flex flex-col items-center text-center h-full relative">
                         <div class="w-full flex justify-between items-start mb-6">
-                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-bold text-primary border border-theme shadow-sm">Weekend Project</div>
+                            <div class="bg-[var(--bg-color)] px-4 py-1.5 rounded-full text-xs font-medium text-primary border border-theme shadow-sm">Weekend Project</div>
                             <div class="w-10 h-10 bg-[var(--bg-color)] rounded-full flex items-center justify-center text-body-muted hover:text-primary border border-theme shadow-sm cursor-pointer transition-colors"><i class="far fa-heart"></i></div>
                         </div>
-                        <div class="flex items-center justify-center gap-4 text-xs font-bold text-body-muted uppercase tracking-wider mb-4 w-full">
+                        <div class="flex items-center justify-center gap-4 text-xs font-medium text-body-muted uppercase tracking-wider mb-4 w-full">
                             <span><i class="far fa-clock text-primary mr-1"></i> 3 Hrs</span>
                             <span><i class="fas fa-signal text-primary mr-1"></i> Medium</span>
                         </div>
-                        <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Classic Beef Bolognese</h3>
+                        <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-4 group-hover:text-primary transition-colors w-full">Classic Beef Bolognese</h3>
                         <p class="text-body-muted font-medium mb-8 flex-grow w-full">A slow-cooked labor of love. Serve over thick ribbons like Tagliatelle or Pappardelle.</p>
-                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-bold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
+                        <a href="#" class="inline-flex items-center justify-center w-full max-w-[200px] mx-auto bg-[var(--bg-color)] border border-theme text-[var(--text-color)] py-3 rounded-xl font-semibold group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all gap-2">Read Recipe <i class="fas fa-arrow-right"></i></a>
                     </div>
 
                 </div>
                 
                 <div class="text-center mt-16 w-full flex justify-center">
-                    <button class="bg-[var(--bg-color)] border-2 border-theme text-[var(--text-color)] px-10 py-4 rounded-full font-bold hover:border-primary hover:text-primary transition-all shadow-sm hover:shadow-md">Load More Recipes</button>
+                    <button class="bg-[var(--bg-color)] border-2 border-theme text-[var(--text-color)] px-10 py-4 rounded-full font-semibold hover:border-primary hover:text-primary transition-all shadow-sm hover:shadow-md">Load More Recipes</button>
                 </div>
             </div>
         </section>
@@ -467,8 +475,8 @@
         <section class="py-24 bg-card border-b border-theme transition-colors">
             <div class="container mx-auto px-4 md:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center justify-center">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm block mb-3 text-center w-full">Chef's Secrets</span>
-                    <h2 class="font-serif text-4xl md:text-5xl font-bold text-[var(--text-color)] text-center w-full">Rules of the Kitchen</h2>
+                    <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-3 text-center w-full">Chef's Secrets</span>
+                    <h2 class="font-serif text-4xl md:text-5xl font-semibold text-primary w-full text-center">Rules of the Kitchen</h2>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -477,7 +485,7 @@
                         <div class="w-16 h-16 mx-auto rounded-full bg-card border-2 border-theme flex items-center justify-center text-2xl text-primary mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shadow-sm">
                             <i class="fas fa-water"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-xl text-[var(--text-color)] mb-3 group-hover:text-primary transition-colors text-center w-full">Salty Like the Sea</h3>
+                        <h3 class="font-serif font-semibold text-xl text-[var(--text-color)] mb-3 group-hover:text-primary transition-colors text-center w-full">Salty Like the Sea</h3>
                         <p class="text-sm text-body-muted font-medium text-center w-full">Pasta water should be heavily salted. It's your only chance to season the pasta itself before it meets the sauce.</p>
                     </div>
 
@@ -485,7 +493,7 @@
                         <div class="w-16 h-16 mx-auto rounded-full bg-card border-2 border-theme flex items-center justify-center text-2xl text-primary mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shadow-sm">
                             <i class="fas fa-droplet-slash"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-xl text-[var(--text-color)] mb-3 group-hover:text-primary transition-colors text-center w-full">Never Rinse</h3>
+                        <h3 class="font-serif font-semibold text-xl text-[var(--text-color)] mb-3 group-hover:text-primary transition-colors text-center w-full">Never Rinse</h3>
                         <p class="text-sm text-body-muted font-medium text-center w-full">Rinsing cooked pasta washes away the precious starches needed to help the sauce cling to the noodles.</p>
                     </div>
 
@@ -493,7 +501,7 @@
                         <div class="w-16 h-16 mx-auto rounded-full bg-card border-2 border-theme flex items-center justify-center text-2xl text-primary mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shadow-sm">
                             <i class="fas fa-spoon"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-xl text-[var(--text-color)] mb-3 group-hover:text-primary transition-colors text-center w-full">Liquid Gold</h3>
+                        <h3 class="font-serif font-semibold text-xl text-[var(--text-color)] mb-3 group-hover:text-primary transition-colors text-center w-full">Liquid Gold</h3>
                         <p class="text-sm text-body-muted font-medium text-center w-full">Always save a cup of starchy pasta water before draining. Use it to thin out and emulsify your sauces.</p>
                     </div>
 
@@ -501,7 +509,7 @@
                         <div class="w-16 h-16 mx-auto rounded-full bg-card border-2 border-theme flex items-center justify-center text-2xl text-primary mb-6 group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all shadow-sm">
                             <i class="fas fa-fire-burner"></i>
                         </div>
-                        <h3 class="font-serif font-bold text-xl text-[var(--text-color)] mb-3 group-hover:text-primary transition-colors text-center w-full">Finish in the Pan</h3>
+                        <h3 class="font-serif font-semibold text-xl text-[var(--text-color)] mb-3 group-hover:text-primary transition-colors text-center w-full">Finish in the Pan</h3>
                         <p class="text-sm text-body-muted font-medium text-center w-full">Drain pasta 1 minute early and finish cooking it directly in the simmering sauce for maximum flavor absorption.</p>
                     </div>
 
@@ -517,7 +525,7 @@
                         <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl mb-6 border border-primary/20">
                             <i class="fas fa-envelope-open-text"></i>
                         </div>
-                        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4 w-full text-[var(--text-color)]">Weekly Recipe Drops</h2>
+                        <h2 class="font-serif text-4xl md:text-5xl font-semibold text-primary mb-4 w-full text-center">Weekly Recipe Drops</h2>
                         <p class="text-lg text-body-muted mb-0 font-medium max-w-xl mx-auto">
                             Get exclusive chef-curated recipes, cooking tips, and seasonal ingredient alerts delivered straight to your inbox every Friday.
                         </p>
@@ -525,12 +533,12 @@
 
                     <div class="relative z-10 w-full max-w-lg mx-auto">
                         <form class="flex flex-col sm:flex-row gap-3 bg-[var(--bg-color)] p-2 rounded-2xl sm:rounded-full shadow-sm border-2 border-theme hover:border-primary transition-colors w-full">
-                            <input type="email" placeholder="Enter your email address" class="w-full px-6 py-4 bg-transparent text-[var(--text-color)] focus:outline-none rounded-full placeholder-[var(--text-muted)] font-bold text-center sm:text-left text-lg" required>
-                            <button type="submit" class="bg-primary text-white font-bold px-8 py-4 rounded-xl sm:rounded-full hover:bg-secondary transition-all hover:scale-105 whitespace-nowrap shadow-md text-lg mx-auto sm:mx-0">
+                            <input type="email" placeholder="Enter your email address" class="w-full px-6 py-4 bg-transparent text-[var(--text-color)] focus:outline-none rounded-full placeholder-[var(--text-muted)] font-medium text-center sm:text-left text-lg" required>
+                            <button type="submit" class="bg-primary text-white font-semibold px-8 py-4 rounded-xl sm:rounded-full hover:bg-secondary transition-all hover:scale-105 whitespace-nowrap shadow-md text-lg mx-auto sm:mx-0">
                                 Subscribe
                             </button>
                         </form>
-                        <p class="text-body-muted text-xs text-center mt-4 px-4 font-bold">By subscribing, you agree to our Terms & Privacy Policy.</p>
+                        <p class="text-body-muted text-xs text-center mt-4 px-4 font-medium">By subscribing, you agree to our Terms & Privacy Policy.</p>
                     </div>
                 </div>
             </div>
@@ -546,7 +554,7 @@
                         <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white transition-transform group-hover:rotate-12 group-hover:scale-110 shadow-[0_0_15px_rgba(224,159,62,0.5)]">
                             <i class="fa-solid fa-wheat-awn"></i>
                         </div>
-                        <span class="font-serif text-2xl font-bold tracking-wide text-white group-hover:text-primary transition-colors">Pasta<span class="text-primary">Perfetto</span></span>
+                        <span class="font-serif text-2xl font-semibold tracking-wide text-white group-hover:text-primary transition-colors">Pasta<span class="text-primary">Perfetto</span></span>
                     </a>
                     <p class="text-gray-400 text-sm mb-6 leading-relaxed hover:text-white transition-colors font-medium">
                         Bringing the authentic taste of Italy to your home with artisanal pastas and slow-simmered sauces.
@@ -559,8 +567,8 @@
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Shop</h4>
-                    <ul class="space-y-3 text-gray-400 font-bold">
+                    <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Shop</h4>
+                    <ul class="space-y-3 text-gray-400 font-medium">
                         <li><a href="pasta.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Fresh Pasta</a></li>
                         <li><a href="sauce.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Sauces</a></li>
                         <li><a href="product.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Olive Oils</a></li>
@@ -569,8 +577,8 @@
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Explore</h4>
-                    <ul class="space-y-3 text-gray-400 font-bold">
+                    <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Explore</h4>
+                    <ul class="space-y-3 text-gray-400 font-medium">
                         <li><a href="about.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">About Us</a></li>
                         <li><a href="recipes.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Recipes</a></li>
                         <li><a href="faq.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">FAQ</a></li>
@@ -579,8 +587,8 @@
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Contact</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm font-bold">
+                    <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm font-medium">
                         <li class="flex items-start gap-3 hover:text-white transition-colors cursor-default">
                             <i class="fas fa-map-marker-alt mt-1 text-primary"></i>
                             <span>123 Culinary Lane,<br>Food District, NY 10001</span>
@@ -597,7 +605,7 @@
                 </div>
             </div>
 
-            <div class="border-t border-[#1f1f1f] pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-bold">
+            <div class="border-t border-[#1f1f1f] pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-medium">
                 <p>&copy; 2026 PastaPerfetto. All rights reserved.</p>
                 <div class="flex gap-6 mt-4 md:mt-0">
                     <a href="faq.html" class="hover:text-primary transition-colors">Privacy Policy</a>

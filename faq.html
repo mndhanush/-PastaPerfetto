@@ -12,7 +12,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     
     <script src="tailwind.js"></script>
     <script>
@@ -173,7 +173,7 @@
                     <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(224,159,62,0.4)] transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 shrink-0">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
-                    <span class="font-serif text-2xl font-bold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap">Pasta<span class="text-primary">Perfetto</span></span>
+                    <span class="font-serif text-2xl font-semibold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap">Pasta<span class="text-primary">Perfetto</span></span>
                 </a>
 
                 <div class="hidden xl:flex items-center space-x-4 2xl:space-x-8 rtl:space-x-reverse mr-4 2xl:mr-8">
@@ -204,7 +204,7 @@
                 </div>
 
                 <div class="flex items-center gap-3 xl:gap-5 2xl:gap-8 shrink-0">
-                    <button class="rtl-toggle-btn hidden xl:flex w-10 h-10 shrink-0 rounded-full items-center justify-center border border-[var(--border-color)] hover:bg-primary hover:text-white hover:border-primary transition-all font-bold text-xs hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] text-[var(--text-color)]">
+                    <button class="rtl-toggle-btn hidden xl:flex w-10 h-10 shrink-0 rounded-full items-center justify-center border border-[var(--border-color)] hover:bg-primary hover:text-white hover:border-primary transition-all font-semibold text-xs hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] text-[var(--text-color)]">
                         RTL
                     </button>
 
@@ -213,8 +213,9 @@
                     </button>
 
                     <div class="hidden xl:flex items-center gap-4 2xl:gap-6 shrink-0 ml-1">
-                        <a href="login.html" class="font-bold text-[var(--text-color)] hover:text-primary transition-colors hover:scale-105 whitespace-nowrap">Login</a>
-                        <a href="register.html" class="bg-primary text-white px-4 2xl:px-5 py-2.5 rounded-full font-bold hover:bg-secondary transition-colors shadow-md hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Register</a>
+                        <!-- Updated Login formatted as primary color button -->
+                        <a href="login.html" class="border-2 border-primary text-primary px-5 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-sm hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Login</a>
+                        <a href="register.html" class="bg-primary text-white px-5 py-2.5 rounded-full font-medium hover:bg-secondary transition-colors shadow-md hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Register</a>
                     </div>
 
                     <button id="mobile-menu-btn" class="flex xl:hidden w-12 h-12 shrink-0 items-center justify-center text-[var(--text-color)] hover:text-primary transition-colors bg-transparent border-0 cursor-pointer rounded-lg hover:bg-primary/10">
@@ -234,11 +235,11 @@
                     <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_10px_rgba(224,159,62,0.5)] transition-transform duration-300">
                         <i class="fa-solid fa-wheat-awn text-xs"></i>
                     </div>
-                    <span class="font-serif text-lg font-bold tracking-wide text-[var(--text-color)] hidden sm:block">Pasta<span class="text-primary">Perfetto</span></span>
+                    <span class="font-serif text-lg font-semibold tracking-wide text-[var(--text-color)] hidden sm:block">Pasta<span class="text-primary">Perfetto</span></span>
                 </a>
                 
                 <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                    <button class="rtl-toggle-btn w-8 h-8 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[10px] font-bold text-[var(--text-color)] hover:bg-primary hover:text-white hover:border-primary transition-colors shadow-sm">
+                    <button class="rtl-toggle-btn w-8 h-8 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[10px] font-semibold text-[var(--text-color)] hover:bg-primary hover:text-white hover:border-primary transition-colors shadow-sm">
                         RTL
                     </button>
                     <button class="theme-toggle w-8 h-8 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[var(--text-color)] hover:bg-primary hover:text-white hover:border-primary transition-colors shadow-sm">
@@ -255,7 +256,7 @@
             
             <div class="flex-grow overflow-y-auto pb-4">
                 <div>
-                    <button class="mobile-dropdown-btn flex items-center justify-between w-full text-left font-serif text-base py-1.5 text-[var(--text-color)] hover:text-primary transition-colors cursor-pointer border-0 bg-transparent font-bold" onclick="toggleMobileDropdown(this, 'home-mobile')">
+                    <button class="mobile-dropdown-btn flex items-center justify-between w-full text-left font-serif text-base py-1.5 text-[var(--text-color)] hover:text-primary transition-colors cursor-pointer border-0 bg-transparent font-medium" onclick="toggleMobileDropdown(this, 'home-mobile')">
                         <span>Home</span>
                         <i class="fas fa-chevron-down dropdown-arrow text-xs text-[var(--text-muted)]"></i>
                     </button>
@@ -265,17 +266,17 @@
                     </div>
                 </div>
                 
-                <a href="about.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">About</a>
-                <a href="product.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Product</a>
-                <a href="pasta.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Pasta</a>
-                <a href="sauce.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Sauce</a>
-                <a href="recipes.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Recipes</a>
-                <a href="pricing.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Pricing</a>
-                <a href="faq.html" class="block font-serif text-base py-1.5 font-bold text-primary transition-transform">FAQ</a>
-                <a href="contact.html" class="block font-serif text-base py-1.5 font-bold text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Contact</a>
+                <a href="about.html" class="block font-serif text-base py-1.5 font-medium text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">About</a>
+                <a href="product.html" class="block font-serif text-base py-1.5 font-medium text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Product</a>
+                <a href="pasta.html" class="block font-serif text-base py-1.5 font-medium text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Pasta</a>
+                <a href="sauce.html" class="block font-serif text-base py-1.5 font-medium text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Sauce</a>
+                <a href="recipes.html" class="block font-serif text-base py-1.5 font-medium text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Recipes</a>
+                <a href="pricing.html" class="block font-serif text-base py-1.5 font-medium text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Pricing</a>
+                <a href="faq.html" class="block font-serif text-base py-1.5 font-medium text-primary transition-transform">FAQ</a>
+                <a href="contact.html" class="block font-serif text-base py-1.5 font-medium text-[var(--text-color)] hover:text-primary hover:translate-x-2 transition-transform">Contact</a>
                 
                 <div>
-                    <button class="mobile-dropdown-btn flex items-center justify-between w-full text-left font-serif text-base py-1.5 text-[var(--text-color)] hover:text-primary transition-colors cursor-pointer border-0 bg-transparent font-bold" onclick="toggleMobileDropdown(this, 'dashboard-mobile')">
+                    <button class="mobile-dropdown-btn flex items-center justify-between w-full text-left font-serif text-base py-1.5 text-[var(--text-color)] hover:text-primary transition-colors cursor-pointer border-0 bg-transparent font-medium" onclick="toggleMobileDropdown(this, 'dashboard-mobile')">
                         <span>Dashboard</span>
                         <i class="fas fa-chevron-down dropdown-arrow text-xs text-[var(--text-muted)]"></i>
                     </button>
@@ -285,8 +286,9 @@
                     </div>
                 </div>
 
-                <div class="pt-4 mt-2 shrink-0 border-t border-theme">
-                    <a href="register.html" class="bg-primary border-2 border-primary text-white w-full py-2.5 rounded-xl font-bold text-base transition-all hover:bg-secondary hover:border-secondary flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(224,159,62,0.4)]">
+                <div class="pt-4 mt-2 shrink-0 border-t border-theme flex flex-col gap-3">
+                  
+                    <a href="register.html" class="bg-primary border-2 border-primary text-white w-full py-2.5 rounded-xl font-medium text-base transition-all hover:bg-secondary hover:border-secondary flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(224,159,62,0.4)]">
                         <i class="fas fa-user-plus"></i> Register
                     </a>
                 </div>
@@ -301,8 +303,8 @@
             <div class="absolute inset-0 bg-black/70 dark:bg-black/80 z-0 transition-colors duration-300"></div>
             
             <div class="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center h-full">
-                <span class="text-primary font-bold tracking-[0.2em] uppercase text-sm md:text-base mb-4 block drop-shadow-md animate-pulse w-full text-center">Knowledge Base</span>
-                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)] mb-6 w-full text-center">
+                <span class="text-primary font-medium tracking-[0.2em] uppercase text-sm md:text-base mb-4 block drop-shadow-md animate-pulse w-full text-center">Knowledge Base</span>
+                <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)] mb-6 w-full text-center">
                     How can we <span class="italic text-primary">help?</span>
                 </h1>
                 
@@ -310,7 +312,7 @@
                     <div class="absolute inset-y-0 left-0 pl-6 flex items-center pointer-events-none">
                         <i class="fas fa-search text-gray-400 text-lg"></i>
                     </div>
-                    <input type="text" placeholder="Search for answers (e.g., 'shipping', 'gluten-free')..." class="w-full bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-gray-300 rounded-full py-5 pl-14 pr-6 focus:outline-none focus:border-primary focus:bg-white/20 transition-all text-lg shadow-lg">
+                    <input type="text" placeholder="Search for answers (e.g., 'shipping', 'gluten-free')...." class="w-full bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-gray-300 rounded-full py-5 pl-14 pr-6 focus:outline-none focus:border-primary focus:bg-white/20 transition-all text-lg shadow-lg font-medium">
                 </div>
             </div>
         </section>
@@ -323,7 +325,7 @@
                         <div class="w-16 h-16 mx-auto bg-[var(--bg-color)] rounded-full flex items-center justify-center text-2xl text-primary border border-theme mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
                             <i class="fas fa-truck-fast"></i>
                         </div>
-                        <h3 class="font-bold text-xl text-[var(--text-color)] mb-2">Shipping & Delivery</h3>
+                        <h3 class="font-semibold text-xl text-[var(--text-color)] mb-2">Shipping & Delivery</h3>
                         <p class="text-body-muted text-sm font-medium">Tracking, packaging, and timelines.</p>
                     </button>
 
@@ -331,7 +333,7 @@
                         <div class="w-16 h-16 mx-auto bg-[var(--bg-color)] rounded-full flex items-center justify-center text-2xl text-primary border border-theme mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
                             <i class="fas fa-wheat-awn"></i>
                         </div>
-                        <h3 class="font-bold text-xl text-[var(--text-color)] mb-2">Product & Quality</h3>
+                        <h3 class="font-semibold text-xl text-[var(--text-color)] mb-2">Product & Quality</h3>
                         <p class="text-body-muted text-sm font-medium">Ingredients, allergies, and cooking.</p>
                     </button>
 
@@ -339,7 +341,7 @@
                         <div class="w-16 h-16 mx-auto bg-[var(--bg-color)] rounded-full flex items-center justify-center text-2xl text-primary border border-theme mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
                             <i class="fas fa-crown"></i>
                         </div>
-                        <h3 class="font-bold text-xl text-[var(--text-color)] mb-2">Memberships</h3>
+                        <h3 class="font-semibold text-xl text-[var(--text-color)] mb-2">Memberships</h3>
                         <p class="text-body-muted text-sm font-medium">Pasta Club, billing, and cancellations.</p>
                     </button>
 
@@ -355,14 +357,14 @@
                         <i class="fas fa-truck-fast"></i>
                     </div>
                     <div class="w-full flex flex-col items-center">
-                        <span class="text-primary font-bold tracking-widest uppercase text-xs block mb-2 w-full text-center">Category 1</span>
-                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-[var(--text-color)] w-full text-center">Shipping & Delivery</h2>
+                        <span class="text-primary font-medium tracking-widest uppercase text-xs block mb-2 w-full text-center">Category 1</span>
+                        <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[var(--text-color)] w-full text-center">Shipping & Delivery</h2>
                     </div>
                 </div>
 
                 <div class="space-y-4">
                     <div class="bg-card border border-theme rounded-2xl overflow-hidden shadow-sm transition-colors">
-                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-medium text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
                             How do you ship fresh pasta safely?
                             <i class="fas fa-chevron-down text-body-muted transition-transform duration-300"></i>
                         </button>
@@ -371,7 +373,7 @@
                         </div>
                     </div>
                     <div class="bg-card border border-theme rounded-2xl overflow-hidden shadow-sm transition-colors">
-                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-medium text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
                             How much does shipping cost?
                             <i class="fas fa-chevron-down text-body-muted transition-transform duration-300"></i>
                         </button>
@@ -380,7 +382,7 @@
                         </div>
                     </div>
                     <div class="bg-card border border-theme rounded-2xl overflow-hidden shadow-sm transition-colors">
-                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-medium text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
                             Do you ship internationally?
                             <i class="fas fa-chevron-down text-body-muted transition-transform duration-300"></i>
                         </button>
@@ -400,14 +402,14 @@
                         <i class="fas fa-wheat-awn"></i>
                     </div>
                     <div class="w-full flex flex-col items-center">
-                        <span class="text-primary font-bold tracking-widest uppercase text-xs block mb-2 w-full text-center">Category 2</span>
-                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-[var(--text-color)] w-full text-center">Product & Quality</h2>
+                        <span class="text-primary font-medium tracking-widest uppercase text-xs block mb-2 w-full text-center">Category 2</span>
+                        <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[var(--text-color)] w-full text-center">Product & Quality</h2>
                     </div>
                 </div>
 
                 <div class="space-y-4">
                     <div class="bg-[var(--bg-color)] border border-theme rounded-2xl overflow-hidden shadow-sm transition-colors">
-                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-medium text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
                             How long does the fresh pasta last?
                             <i class="fas fa-chevron-down text-body-muted transition-transform duration-300"></i>
                         </button>
@@ -416,7 +418,7 @@
                         </div>
                     </div>
                     <div class="bg-[var(--bg-color)] border border-theme rounded-2xl overflow-hidden shadow-sm transition-colors">
-                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-medium text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
                             Do you offer gluten-free options?
                             <i class="fas fa-chevron-down text-body-muted transition-transform duration-300"></i>
                         </button>
@@ -425,7 +427,7 @@
                         </div>
                     </div>
                     <div class="bg-[var(--bg-color)] border border-theme rounded-2xl overflow-hidden shadow-sm transition-colors">
-                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-medium text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
                             Are your ingredients really 100% organic?
                             <i class="fas fa-chevron-down text-body-muted transition-transform duration-300"></i>
                         </button>
@@ -445,14 +447,14 @@
                         <i class="fas fa-crown"></i>
                     </div>
                     <div class="w-full flex flex-col items-center">
-                        <span class="text-primary font-bold tracking-widest uppercase text-xs block mb-2 w-full text-center">Category 3</span>
-                        <h2 class="font-serif text-3xl md:text-4xl font-bold text-[var(--text-color)] w-full text-center">Memberships & Billing</h2>
+                        <span class="text-primary font-medium tracking-widest uppercase text-xs block mb-2 w-full text-center">Category 3</span>
+                        <h2 class="font-serif text-3xl md:text-4xl font-semibold text-[var(--text-color)] w-full text-center">Memberships & Billing</h2>
                     </div>
                 </div>
 
                 <div class="space-y-4">
                     <div class="bg-card border border-theme rounded-2xl overflow-hidden shadow-sm transition-colors">
-                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-medium text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
                             How does the Pasta Club work?
                             <i class="fas fa-chevron-down text-body-muted transition-transform duration-300"></i>
                         </button>
@@ -461,7 +463,7 @@
                         </div>
                     </div>
                     <div class="bg-card border border-theme rounded-2xl overflow-hidden shadow-sm transition-colors">
-                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-medium text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
                             Is it hard to cancel my subscription?
                             <i class="fas fa-chevron-down text-body-muted transition-transform duration-300"></i>
                         </button>
@@ -470,7 +472,7 @@
                         </div>
                     </div>
                     <div class="bg-card border border-theme rounded-2xl overflow-hidden shadow-sm transition-colors">
-                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-bold text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
+                        <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex justify-between items-center font-medium text-[var(--text-color)] hover:text-primary transition-colors focus:outline-none text-lg">
                             What is the 'Reserve' menu for VIPs?
                             <i class="fas fa-chevron-down text-body-muted transition-transform duration-300"></i>
                         </button>
@@ -488,8 +490,8 @@
                 <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center text-white text-3xl mb-8 border border-white/20 shadow-lg backdrop-blur-sm">
                     <i class="fas fa-handshake-angle"></i>
                 </div>
-                <span class="font-bold tracking-[0.2em] uppercase text-sm block mb-4 text-white/80 text-center w-full">Dedicated Support</span>
-                <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 max-w-4xl leading-tight drop-shadow-md text-center w-full">
+                <span class="font-medium tracking-[0.2em] uppercase text-sm block mb-4 text-white/80 text-center w-full">Dedicated Support</span>
+                <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 max-w-4xl leading-tight drop-shadow-md text-center w-full">
                     "Support as artisanal as our pasta."
                 </h2>
                 <p class="text-lg md:text-xl font-medium max-w-2xl text-white/90 mb-10 text-center w-full">
@@ -507,15 +509,15 @@
                 <div class="w-24 h-24 mx-auto bg-card rounded-full flex items-center justify-center text-4xl text-primary mb-8 shadow-lg border border-theme animate-bounce">
                     <i class="fas fa-envelope-open-text"></i>
                 </div>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-[var(--text-color)] mb-6 text-center w-full">General Inquiries</h2>
+                <h2 class="font-serif text-4xl md:text-5xl font-semibold text-[var(--text-color)] mb-6 text-center w-full">General Inquiries</h2>
                 <p class="text-lg text-body-muted font-medium mb-10 leading-relaxed max-w-2xl mx-auto text-center w-full">
                     For non-culinary questions, order tracking, or wholesale requests, our customer service team is ready to assist you.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="contact.html" class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-secondary transition-all shadow-[0_10px_20px_rgba(224,159,62,0.4)] transform hover:-translate-y-1">
+                    <a href="contact.html" class="w-full sm:w-auto bg-primary text-white px-10 py-5 rounded-full font-medium text-lg hover:bg-secondary transition-all shadow-[0_10px_20px_rgba(224,159,62,0.4)] transform hover:-translate-y-1">
                         Contact Support Form
                     </a>
-                    <a href="mailto:ciao@pastaperfetto.com" class="w-full sm:w-auto bg-transparent border-2 border-[var(--text-color)] text-[var(--text-color)] px-10 py-5 rounded-full font-bold text-lg hover:bg-[var(--text-color)] hover:text-[var(--bg-color)] transition-all transform hover:-translate-y-1">
+                    <a href="mailto:ciao@pastaperfetto.com" class="w-full sm:w-auto bg-transparent border-2 border-[var(--text-color)] text-[var(--text-color)] px-10 py-5 rounded-full font-medium text-lg hover:bg-[var(--text-color)] hover:text-[var(--bg-color)] transition-all transform hover:-translate-y-1">
                         Email Us Directly
                     </a>
                 </div>
@@ -532,7 +534,7 @@
                         <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white transition-transform group-hover:rotate-12 group-hover:scale-110 shadow-[0_0_15px_rgba(224,159,62,0.5)]">
                             <i class="fa-solid fa-wheat-awn"></i>
                         </div>
-                        <span class="font-serif text-2xl font-bold tracking-wide text-white group-hover:text-primary transition-colors">Pasta<span class="text-primary">Perfetto</span></span>
+                        <span class="font-serif text-2xl font-semibold tracking-wide text-white group-hover:text-primary transition-colors">Pasta<span class="text-primary">Perfetto</span></span>
                     </a>
                     <p class="text-gray-400 text-sm mb-6 leading-relaxed hover:text-white transition-colors font-medium">
                         Bringing the authentic taste of Italy to your home with artisanal pastas and slow-simmered sauces.
@@ -545,8 +547,8 @@
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Shop</h4>
-                    <ul class="space-y-3 text-gray-400 font-bold">
+                    <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Shop</h4>
+                    <ul class="space-y-3 text-gray-400 font-medium">
                         <li><a href="pasta.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Fresh Pasta</a></li>
                         <li><a href="sauce.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Sauces</a></li>
                         <li><a href="product.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Olive Oils</a></li>
@@ -555,8 +557,8 @@
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Explore</h4>
-                    <ul class="space-y-3 text-gray-400 font-bold">
+                    <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Explore</h4>
+                    <ul class="space-y-3 text-gray-400 font-medium">
                         <li><a href="about.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">About Us</a></li>
                         <li><a href="recipes.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Recipes</a></li>
                         <li><a href="faq.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">FAQ</a></li>
@@ -565,8 +567,8 @@
                 </div>
 
                 <div>
-                    <h4 class="font-bold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Contact</h4>
-                    <ul class="space-y-4 text-gray-400 text-sm font-bold">
+                    <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Contact</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm font-medium">
                         <li class="flex items-start gap-3 hover:text-white transition-colors cursor-default">
                             <i class="fas fa-map-marker-alt mt-1 text-primary"></i>
                             <span>123 Culinary Lane,<br>Food District, NY 10001</span>
@@ -583,7 +585,7 @@
                 </div>
             </div>
 
-            <div class="border-t border-[#1f1f1f] pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-bold">
+            <div class="border-t border-[#1f1f1f] pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500 font-medium">
                 <p>© 2026 PastaPerfetto. All rights reserved.</p>
                 <div class="flex gap-6 mt-4 md:mt-0">
                     <a href="faq.html" class="hover:text-primary transition-colors">Privacy Policy</a>

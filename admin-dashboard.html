@@ -12,7 +12,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
     
     <script src="tailwind.js"></script>
     <script>
@@ -49,7 +49,7 @@
     <style type="text/tailwindcss">
         @layer components {
             .sidebar-link {
-                @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-all duration-300 text-mutedLight dark:text-mutedDark hover:bg-bgLight dark:hover:bg-bgDark hover:text-primary dark:hover:text-primary border-l-4 border-transparent cursor-pointer font-sans;
+                @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-mutedLight dark:text-mutedDark hover:bg-bgLight dark:hover:bg-bgDark hover:text-primary dark:hover:text-primary border-l-4 border-transparent cursor-pointer font-sans;
             }
             .sidebar-link.active {
                 @apply bg-cardLight dark:bg-bgDark shadow-sm text-primary border-l-4 border-primary;
@@ -58,7 +58,7 @@
                 @apply bg-cardLight dark:bg-cardDark p-6 rounded-3xl shadow-md border border-borderLight dark:border-borderDark transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl border-t-4 border-t-primary hover:border-primary;
             }
             .action-btn {
-                @apply bg-primary hover:bg-secondary text-white py-3 px-6 rounded-xl font-bold text-sm transition-all duration-300 shadow-[0_4px_15px_rgba(224,159,62,0.3)] hover:shadow-[0_6px_20px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 inline-flex items-center justify-center;
+                @apply bg-primary hover:bg-secondary text-white py-3 px-6 rounded-xl font-medium text-sm transition-all duration-300 shadow-[0_4px_15px_rgba(224,159,62,0.3)] hover:shadow-[0_6px_20px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 inline-flex items-center justify-center;
             }
             .card-section {
                 @apply bg-cardLight dark:bg-cardDark rounded-3xl shadow-md border border-borderLight dark:border-borderDark p-6 md:p-8;
@@ -98,7 +98,7 @@
         <div class="container mx-auto px-4 md:px-6 lg:px-8 h-full flex justify-between items-center">
             
             <div class="flex items-center gap-2 sm:gap-4">
-                <button id="mobileMenuBtn" class="md:hidden text-textLight dark:text-textDark hover:text-primary transition-colors text-xl font-bold leading-none border-0 bg-transparent cursor-pointer">
+                <button id="mobileMenuBtn" class="md:hidden text-textLight dark:text-textDark hover:text-primary transition-colors text-xl font-medium leading-none border-0 bg-transparent cursor-pointer">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -106,19 +106,15 @@
                     <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(224,159,62,0.4)] transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 shrink-0">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
-                    <span class="font-serif text-2xl font-bold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap hidden sm:block">Pasta<span class="text-primary">Perfetto</span></span>
+                    <!-- Removed hidden class so logo is visible on mobile -->
+                    <span class="font-serif text-xl sm:text-2xl font-semibold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap">Pasta<span class="text-primary">Perfetto</span></span>
                 </a>
             </div>
 
             <div class="flex items-center gap-2 sm:gap-3 md:gap-5">
-                
-                <a href="index.html" class="hidden md:flex text-sm font-bold text-mutedLight dark:text-mutedDark hover:text-primary transition-colors mr-2">
-                    <i class="fas fa-store mr-2 mt-0.5"></i> Live Store
-                </a>
-
                 <div class="flex items-center gap-1 sm:gap-2 ltr:mr-2 rtl:ml-2 border-r border-borderLight dark:border-borderDark ltr:pr-2 sm:ltr:pr-4 rtl:pl-2 sm:rtl:pl-4">
                     <button class="w-10 h-10 bg-cardLight dark:bg-cardDark rounded-full border border-borderLight dark:border-borderDark flex items-center justify-center text-textLight dark:text-textDark transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary shrink-0 shadow-sm cursor-pointer" id="rtl-toggle-btn" title="Toggle RTL">
-                        <span class="text-[10px] font-black">RTL</span>
+                        <span class="text-[10px] font-semibold">RTL</span>
                     </button>
                     <button class="w-10 h-10 bg-cardLight dark:bg-cardDark rounded-full border border-borderLight dark:border-borderDark flex items-center justify-center text-textLight dark:text-textDark transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary shrink-0 shadow-sm cursor-pointer" id="theme-toggle-btn" title="Toggle Dark Mode">
                         <i class="fas fa-moon transition-transform" id="theme-icon"></i>
@@ -127,10 +123,10 @@
 
                 <div class="flex items-center gap-3 cursor-pointer group">
                     <div class="ltr:text-right rtl:text-left hidden lg:block">
-                        <p class="text-sm font-bold text-textLight dark:text-textDark leading-tight">Admin System</p>
-                        <p class="text-[10px] font-black uppercase tracking-wider text-red-500">Superuser</p>
+                        <p class="text-sm font-semibold text-textLight dark:text-textDark leading-tight">Admin System</p>
+                        <p class="text-[10px] font-semibold uppercase tracking-wider text-red-500">Superuser</p>
                     </div>
-                    <div class="w-10 h-10 rounded-full bg-[#050505] dark:bg-cardLight text-white dark:text-black flex items-center justify-center font-black text-sm border-2 border-primary transition-all shadow-[0_0_10px_rgba(224,159,62,0.4)] group-hover:scale-105 tracking-widest">
+                    <div class="w-10 h-10 rounded-full bg-[#050505] dark:bg-cardLight text-white dark:text-black flex items-center justify-center font-semibold text-sm border-2 border-primary transition-all shadow-[0_0_10px_rgba(224,159,62,0.4)] group-hover:scale-105 tracking-widest">
                         AD
                     </div>
                 </div>
@@ -142,13 +138,13 @@
         
         <aside id="sidebar" class="w-64 bg-cardLight dark:bg-cardDark border-r border-borderLight dark:border-borderDark flex-shrink-0 flex flex-col transition-transform duration-300 absolute md:relative z-40 h-full ltr:-translate-x-full ltr:md:translate-x-0 rtl:translate-x-full rtl:md:translate-x-0 shadow-2xl md:shadow-none">
             <div class="p-5 flex-1 overflow-y-auto space-y-2 mt-4">
-                <p class="text-[10px] font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest mb-4 ltr:ml-4 rtl:mr-4">Management</p>
+                <p class="text-[10px] font-semibold text-mutedLight dark:text-mutedDark uppercase tracking-widest mb-4 ltr:ml-4 rtl:mr-4">Management</p>
                 
                 <a class="sidebar-link active" onclick="switchTab(event, 'section-dashboard')">
                     <i class="fas fa-chart-line w-5 text-center"></i> Overview
                 </a>
                 <a class="sidebar-link" onclick="switchTab(event, 'section-orders')">
-                    <i class="fas fa-receipt w-5 text-center"></i> Orders <span class="ml-auto bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full">12</span>
+                    <i class="fas fa-receipt w-5 text-center"></i> Orders <span class="ml-auto bg-red-500 text-white text-[10px] px-2 py-0.5 rounded-full font-medium">12</span>
                 </a>
                 <a class="sidebar-link" onclick="switchTab(event, 'section-inventory')">
                     <i class="fas fa-boxes-stacked w-5 text-center"></i> Inventory
@@ -159,7 +155,7 @@
                 
                 <div class="my-6 border-t border-borderLight dark:border-borderDark"></div>
                 
-                <p class="text-[10px] font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest mb-4 ltr:ml-4 rtl:mr-4">System</p>
+                <p class="text-[10px] font-semibold text-mutedLight dark:text-mutedDark uppercase tracking-widest mb-4 ltr:ml-4 rtl:mr-4">System</p>
                 
                 <a class="sidebar-link" onclick="switchTab(event, 'section-analytics')">
                     <i class="fas fa-chart-pie w-5 text-center"></i> Analytics
@@ -168,14 +164,14 @@
                     <i class="fas fa-sliders w-5 text-center"></i> Store Settings
                 </a>
                 
-                <a href="login.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-all duration-300 text-red-500 hover:text-white hover:bg-red-500 mt-4 border-none cursor-pointer no-underline shadow-sm hover:shadow-md">
+                <a href="login.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-red-500 hover:text-white hover:bg-red-500 mt-4 border-none cursor-pointer no-underline shadow-sm hover:shadow-md">
                     <i class="fas fa-sign-out-alt w-5 text-center ltr:rotate-0 rtl:rotate-180"></i>
-                    Secure Logout
+                     Logout
                 </a>
             </div>
 
             <div class="p-5 m-4 bg-bgLight dark:bg-bgDark rounded-2xl border border-borderLight dark:border-borderDark relative overflow-hidden shadow-sm">
-                <h4 class="text-textLight dark:text-textDark font-bold text-sm mb-2 flex items-center gap-2">
+                <h4 class="text-textLight dark:text-textDark font-semibold text-sm mb-2 flex items-center gap-2">
                     <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> System Status
                 </h4>
                 <p class="text-xs text-mutedLight dark:text-mutedDark font-medium">All services operational. Last backup: 10 mins ago.</p>
@@ -190,7 +186,7 @@
                 <div id="section-dashboard" class="page-section block animate-fade-in-up space-y-8">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-borderLight dark:border-borderDark pb-6">
                         <div>
-                            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[var(--text-color)] tracking-tight mb-2">
+                            <h1 class="font-serif text-3xl md:text-4xl font-semibold text-[var(--text-color)] tracking-tight mb-2">
                                 System Overview
                             </h1>
                             <p class="text-mutedLight dark:text-mutedDark text-sm font-medium">Real-time metrics for PastaPerfetto.</p>
@@ -203,68 +199,68 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div class="stat-card group">
                             <div class="flex justify-between items-start mb-6">
-                                <div class="text-green-500 text-xs font-black uppercase tracking-wider bg-green-500/10 px-3 py-1.5 rounded-lg border border-green-500/20"><i class="fas fa-dollar-sign mr-1"></i> Today's Sales</div>
+                                <div class="text-green-500 text-xs font-semibold uppercase tracking-wider bg-green-500/10 px-3 py-1.5 rounded-lg border border-green-500/20"><i class="fas fa-dollar-sign mr-1"></i> Today's Sales</div>
                             </div>
-                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-bold uppercase tracking-widest mb-1">Gross Revenue</h3>
-                            <p class="font-sans text-3xl font-black text-textLight dark:text-textDark group-hover:text-green-500 transition-colors">$4,250.00</p>
+                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-medium uppercase tracking-widest mb-1">Gross Revenue</h3>
+                            <p class="font-sans text-3xl font-semibold text-textLight dark:text-textDark group-hover:text-green-500 transition-colors">$4,250.00</p>
                         </div>
 
                         <div class="stat-card group">
                             <div class="flex justify-between items-start mb-6">
-                                <div class="text-primary text-xs font-black uppercase tracking-wider bg-primary/10 px-3 py-1.5 rounded-lg border border-primary/20"><i class="fas fa-box-open mr-1"></i> Pending</div>
+                                <div class="text-primary text-xs font-semibold uppercase tracking-wider bg-primary/10 px-3 py-1.5 rounded-lg border border-primary/20"><i class="fas fa-box-open mr-1"></i> Pending</div>
                             </div>
-                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-bold uppercase tracking-widest mb-1">Orders to Ship</h3>
-                            <p class="font-sans text-3xl font-black text-textLight dark:text-textDark group-hover:text-primary transition-colors">12 <span class="text-sm text-mutedLight dark:text-mutedDark font-medium">orders</span></p>
+                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-medium uppercase tracking-widest mb-1">Orders to Ship</h3>
+                            <p class="font-sans text-3xl font-semibold text-textLight dark:text-textDark group-hover:text-primary transition-colors">12 <span class="text-sm text-mutedLight dark:text-mutedDark font-medium">orders</span></p>
                         </div>
 
                         <div class="stat-card group">
                             <div class="flex justify-between items-start mb-6">
-                                <div class="text-blue-500 text-xs font-black uppercase tracking-wider bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/20"><i class="fas fa-crown mr-1"></i> Subs</div>
+                                <div class="text-blue-500 text-xs font-semibold uppercase tracking-wider bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/20"><i class="fas fa-crown mr-1"></i> Subs</div>
                             </div>
-                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-bold uppercase tracking-widest mb-1">Active VIPs</h3>
-                            <p class="font-sans text-3xl font-black text-textLight dark:text-textDark group-hover:text-blue-500 transition-colors">845</p>
+                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-medium uppercase tracking-widest mb-1">Active VIPs</h3>
+                            <p class="font-sans text-3xl font-semibold text-textLight dark:text-textDark group-hover:text-blue-500 transition-colors">845</p>
                         </div>
 
                         <div class="stat-card group !border-t-red-500 hover:!border-red-500">
                             <div class="flex justify-between items-start mb-6">
-                                <div class="text-red-500 text-xs font-black uppercase tracking-wider bg-red-500/10 px-3 py-1.5 rounded-lg border border-red-500/20"><i class="fas fa-triangle-exclamation mr-1"></i> Alerts</div>
+                                <div class="text-red-500 text-xs font-semibold uppercase tracking-wider bg-red-500/10 px-3 py-1.5 rounded-lg border border-red-500/20"><i class="fas fa-triangle-exclamation mr-1"></i> Alerts</div>
                             </div>
-                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-bold uppercase tracking-widest mb-1">Low Stock Items</h3>
-                            <p class="font-sans text-3xl font-black text-textLight dark:text-textDark group-hover:text-red-500 transition-colors">3 <span class="text-sm text-mutedLight dark:text-mutedDark font-medium">SKUs</span></p>
+                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-medium uppercase tracking-widest mb-1">Low Stock Items</h3>
+                            <p class="font-sans text-3xl font-semibold text-textLight dark:text-textDark group-hover:text-red-500 transition-colors">3 <span class="text-sm text-mutedLight dark:text-mutedDark font-medium">SKUs</span></p>
                         </div>
                     </div>
 
                     <div class="mt-12 pt-8 border-t border-borderLight dark:border-borderDark">
-                        <span class="text-primary font-bold tracking-widest uppercase text-sm block mb-3">Admin Tools</span>
-                        <h2 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-6">Quick Actions</h2>
+                        <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-3">Admin Tools</span>
+                        <h2 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-6">Quick Actions</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             
                             <button onclick="switchTab(event, 'section-inventory')" class="bg-bgLight dark:bg-bgDark p-8 rounded-3xl border border-borderLight dark:border-borderDark hover:border-primary hover:bg-primary/5 transition-all text-center group shadow-sm hover:shadow-md cursor-pointer">
                                 <div class="w-16 h-16 mx-auto bg-cardLight dark:bg-cardDark border border-borderLight dark:border-borderDark rounded-full flex items-center justify-center text-primary text-2xl mb-4 group-hover:scale-110 transition-transform shadow-sm">
                                     <i class="fas fa-plus"></i>
                                 </div>
-                                <h3 class="font-bold text-textLight dark:text-textDark">Add Product</h3>
+                                <h3 class="font-medium text-textLight dark:text-textDark">Add Product</h3>
                             </button>
 
                             <button onclick="switchTab(event, 'section-customers')" class="bg-bgLight dark:bg-bgDark p-8 rounded-3xl border border-borderLight dark:border-borderDark hover:border-primary hover:bg-primary/5 transition-all text-center group shadow-sm hover:shadow-md cursor-pointer">
                                 <div class="w-16 h-16 mx-auto bg-cardLight dark:bg-cardDark border border-borderLight dark:border-borderDark rounded-full flex items-center justify-center text-primary text-2xl mb-4 group-hover:scale-110 transition-transform shadow-sm">
                                     <i class="fas fa-envelope"></i>
                                 </div>
-                                <h3 class="font-bold text-textLight dark:text-textDark">Email Members</h3>
+                                <h3 class="font-medium text-textLight dark:text-textDark">Email Members</h3>
                             </button>
 
                             <button onclick="switchTab(event, 'section-analytics')" class="bg-bgLight dark:bg-bgDark p-8 rounded-3xl border border-borderLight dark:border-borderDark hover:border-primary hover:bg-primary/5 transition-all text-center group shadow-sm hover:shadow-md cursor-pointer">
                                 <div class="w-16 h-16 mx-auto bg-cardLight dark:bg-cardDark border border-borderLight dark:border-borderDark rounded-full flex items-center justify-center text-primary text-2xl mb-4 group-hover:scale-110 transition-transform shadow-sm">
                                     <i class="fas fa-file-invoice"></i>
                                 </div>
-                                <h3 class="font-bold text-textLight dark:text-textDark">Export Sales</h3>
+                                <h3 class="font-medium text-textLight dark:text-textDark">Export Sales</h3>
                             </button>
 
                             <button onclick="switchTab(event, 'section-settings')" class="bg-bgLight dark:bg-bgDark p-8 rounded-3xl border border-borderLight dark:border-borderDark hover:border-primary hover:bg-primary/5 transition-all text-center group shadow-sm hover:shadow-md cursor-pointer">
                                 <div class="w-16 h-16 mx-auto bg-cardLight dark:bg-cardDark border border-borderLight dark:border-borderDark rounded-full flex items-center justify-center text-primary text-2xl mb-4 group-hover:scale-110 transition-transform shadow-sm">
                                     <i class="fas fa-tags"></i>
                                 </div>
-                                <h3 class="font-bold text-textLight dark:text-textDark">Edit Coupons</h3>
+                                <h3 class="font-medium text-textLight dark:text-textDark">Edit Coupons</h3>
                             </button>
 
                         </div>
@@ -272,78 +268,78 @@
                 </div>
 
                 <div id="section-orders" class="page-section hidden space-y-6">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm block mb-1">Fulfillment</span>
-                    <h2 class="font-serif text-3xl font-bold text-[var(--text-color)] tracking-tight mb-6">Recent Orders</h2>
+                    <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-1">Fulfillment</span>
+                    <h2 class="font-serif text-3xl font-semibold text-[var(--text-color)] tracking-tight mb-6">Recent Orders</h2>
                     
                     <div class="card-section p-0 overflow-hidden">
                         <div class="p-4 border-b border-borderLight dark:border-borderDark flex flex-wrap gap-4 justify-between items-center bg-bgLight dark:bg-bgDark">
                             <input type="text" placeholder="Search Order ID..." class="input-field !py-2 !w-64">
                             <div class="flex gap-2">
-                                <button class="px-4 py-2 bg-primary/10 text-primary font-bold text-xs rounded-lg border border-primary/20">Pending (12)</button>
-                                <button class="px-4 py-2 bg-cardLight dark:bg-cardDark text-mutedLight dark:text-mutedDark font-bold text-xs rounded-lg border border-borderLight dark:border-borderDark">Completed</button>
+                                <button class="px-4 py-2 bg-primary/10 text-primary font-medium text-xs rounded-lg border border-primary/20">Pending (12)</button>
+                                <button class="px-4 py-2 bg-cardLight dark:bg-cardDark text-mutedLight dark:text-mutedDark font-medium text-xs rounded-lg border border-borderLight dark:border-borderDark">Completed</button>
                             </div>
                         </div>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left border-collapse">
                                 <thead>
                                     <tr class="bg-bgLight dark:bg-bgDark border-b border-borderLight dark:border-borderDark">
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest">Order ID</th>
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest">Customer</th>
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest">Amount</th>
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest">Status</th>
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest text-center">Action</th>
+                                        <th class="px-6 py-5 text-xs font-semibold text-mutedLight dark:text-mutedDark uppercase tracking-widest">Order ID</th>
+                                        <th class="px-6 py-5 text-xs font-semibold text-mutedLight dark:text-mutedDark uppercase tracking-widest">Customer</th>
+                                        <th class="px-6 py-5 text-xs font-semibold text-mutedLight dark:text-mutedDark uppercase tracking-widest">Amount</th>
+                                        <th class="px-6 py-5 text-xs font-semibold text-mutedLight dark:text-mutedDark uppercase tracking-widest">Status</th>
+                                        <th class="px-6 py-5 text-xs font-semibold text-mutedLight dark:text-mutedDark uppercase tracking-widest text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-borderLight dark:divide-borderDark">
                                     
                                     <tr class="hover:bg-bgLight dark:hover:bg-bgDark transition-colors">
-                                        <td class="px-6 py-5 text-sm font-bold text-textLight dark:text-textDark">#ORD-9012</td>
+                                        <td class="px-6 py-5 text-sm font-medium text-textLight dark:text-textDark">#ORD-9012</td>
                                         <td class="px-6 py-5">
-                                            <div class="text-sm font-bold text-textLight dark:text-textDark">Sarah Jenkins</div>
+                                            <div class="text-sm font-medium text-textLight dark:text-textDark">Sarah Jenkins</div>
                                             <div class="text-xs text-mutedLight dark:text-mutedDark">sarah@example.com</div>
                                         </td>
-                                        <td class="px-6 py-5 text-sm font-black text-textLight dark:text-textDark">$145.00</td>
+                                        <td class="px-6 py-5 text-sm font-semibold text-textLight dark:text-textDark">$145.00</td>
                                         <td class="px-6 py-5">
-                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-primary/10 text-primary border border-primary/20">
+                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
                                                 Needs Packing
                                             </span>
                                         </td>
                                         <td class="px-6 py-5 text-center">
-                                            <button class="bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors shadow-sm">Mark Shipped</button>
+                                            <button class="bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 rounded-lg text-xs font-medium transition-colors shadow-sm">Mark Shipped</button>
                                         </td>
                                     </tr>
 
                                     <tr class="hover:bg-bgLight dark:hover:bg-bgDark transition-colors">
-                                        <td class="px-6 py-5 text-sm font-bold text-textLight dark:text-textDark">#ORD-9011</td>
+                                        <td class="px-6 py-5 text-sm font-medium text-textLight dark:text-textDark">#ORD-9011</td>
                                         <td class="px-6 py-5">
-                                            <div class="text-sm font-bold text-textLight dark:text-textDark">David M.</div>
+                                            <div class="text-sm font-medium text-textLight dark:text-textDark">David M.</div>
                                             <div class="text-xs text-mutedLight dark:text-mutedDark">david@example.com</div>
                                         </td>
-                                        <td class="px-6 py-5 text-sm font-black text-textLight dark:text-textDark">$89.00</td>
+                                        <td class="px-6 py-5 text-sm font-semibold text-textLight dark:text-textDark">$89.00</td>
                                         <td class="px-6 py-5">
-                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-blue-500 border border-blue-500/20">
+                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-500 border border-blue-500/20">
                                                 Label Printed
                                             </span>
                                         </td>
                                         <td class="px-6 py-5 text-center">
-                                            <button class="bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors shadow-sm">Mark Shipped</button>
+                                            <button class="bg-green-500 hover:bg-green-600 text-white px-3 py-1.5 rounded-lg text-xs font-medium transition-colors shadow-sm">Mark Shipped</button>
                                         </td>
                                     </tr>
 
                                     <tr class="hover:bg-bgLight dark:hover:bg-bgDark transition-colors">
-                                        <td class="px-6 py-5 text-sm font-bold text-textLight dark:text-textDark">#ORD-9010</td>
+                                        <td class="px-6 py-5 text-sm font-medium text-textLight dark:text-textDark">#ORD-9010</td>
                                         <td class="px-6 py-5">
-                                            <div class="text-sm font-bold text-textLight dark:text-textDark">Elena Rossi</div>
+                                            <div class="text-sm font-medium text-textLight dark:text-textDark">Elena Rossi</div>
                                             <div class="text-xs text-mutedLight dark:text-mutedDark">elena@example.com</div>
                                         </td>
-                                        <td class="px-6 py-5 text-sm font-black text-textLight dark:text-textDark">$42.00</td>
+                                        <td class="px-6 py-5 text-sm font-semibold text-textLight dark:text-textDark">$42.00</td>
                                         <td class="px-6 py-5">
-                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-200 dark:border-green-800">
                                                 Shipped
                                             </span>
                                         </td>
                                         <td class="px-6 py-5 text-center">
-                                            <button class="bg-cardLight dark:bg-cardDark text-mutedLight dark:text-mutedDark border border-borderLight dark:border-borderDark hover:text-primary px-3 py-1.5 rounded-lg text-xs font-bold transition-colors">View Details</button>
+                                            <button class="bg-cardLight dark:bg-cardDark text-mutedLight dark:text-mutedDark border border-borderLight dark:border-borderDark hover:text-primary px-3 py-1.5 rounded-lg text-xs font-medium transition-colors">View Details</button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -355,8 +351,8 @@
                 <div id="section-inventory" class="page-section hidden space-y-6">
                     <div class="flex justify-between items-end mb-6">
                         <div>
-                            <span class="text-primary font-bold tracking-widest uppercase text-sm block mb-1">Stock Levels</span>
-                            <h2 class="font-serif text-3xl font-bold text-[var(--text-color)] tracking-tight">Inventory Control</h2>
+                            <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-1">Stock Levels</span>
+                            <h2 class="font-serif text-3xl font-semibold text-[var(--text-color)] tracking-tight">Inventory Control</h2>
                         </div>
                         <button class="action-btn !py-2 !px-4 !text-xs"><i class="fas fa-plus mr-2"></i>New SKU</button>
                     </div>
@@ -364,11 +360,11 @@
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         
                         <div class="card-section border-t-4 border-t-primary">
-                            <h3 class="font-serif text-xl font-bold text-[var(--text-color)] mb-6 border-b border-borderLight dark:border-borderDark pb-3">Fresh Pasta (Daily)</h3>
+                            <h3 class="font-serif text-xl font-semibold text-[var(--text-color)] mb-6 border-b border-borderLight dark:border-borderDark pb-3">Fresh Pasta (Daily)</h3>
                             
                             <div class="space-y-6">
                                 <div>
-                                    <div class="flex justify-between text-sm font-bold text-textLight dark:text-textDark mb-2">
+                                    <div class="flex justify-between text-sm font-medium text-textLight dark:text-textDark mb-2">
                                         <span>Tonnarelli (Lbs)</span>
                                         <span class="text-green-500">45 / 50</span>
                                     </div>
@@ -378,7 +374,7 @@
                                 </div>
                                 
                                 <div>
-                                    <div class="flex justify-between text-sm font-bold text-textLight dark:text-textDark mb-2">
+                                    <div class="flex justify-between text-sm font-medium text-textLight dark:text-textDark mb-2">
                                         <span>Pappardelle (Lbs)</span>
                                         <span class="text-primary">20 / 50</span>
                                     </div>
@@ -388,9 +384,9 @@
                                 </div>
 
                                 <div>
-                                    <div class="flex justify-between text-sm font-bold text-textLight dark:text-textDark mb-2">
+                                    <div class="flex justify-between text-sm font-medium text-textLight dark:text-textDark mb-2">
                                         <span>Squid Ink Linguine (Lbs)</span>
-                                        <span class="text-red-500 font-black">2 / 20 (Low)</span>
+                                        <span class="text-red-500 font-semibold">2 / 20 (Low)</span>
                                     </div>
                                     <div class="w-full bg-bgLight dark:bg-bgDark rounded-full h-2 mb-1 border border-borderLight dark:border-borderDark overflow-hidden">
                                         <div class="bg-red-500 h-2 rounded-full animate-pulse" style="width: 10%"></div>
@@ -400,11 +396,11 @@
                         </div>
 
                         <div class="card-section border-t-4 border-t-secondary">
-                            <h3 class="font-serif text-xl font-bold text-[var(--text-color)] mb-6 border-b border-borderLight dark:border-borderDark pb-3">Jarred Sauces</h3>
+                            <h3 class="font-serif text-xl font-semibold text-[var(--text-color)] mb-6 border-b border-borderLight dark:border-borderDark pb-3">Jarred Sauces</h3>
                             
                             <div class="space-y-6">
                                 <div>
-                                    <div class="flex justify-between text-sm font-bold text-textLight dark:text-textDark mb-2">
+                                    <div class="flex justify-between text-sm font-medium text-textLight dark:text-textDark mb-2">
                                         <span>Classic Marinara (Jars)</span>
                                         <span class="text-green-500">120 / 150</span>
                                     </div>
@@ -414,7 +410,7 @@
                                 </div>
                                 
                                 <div>
-                                    <div class="flex justify-between text-sm font-bold text-textLight dark:text-textDark mb-2">
+                                    <div class="flex justify-between text-sm font-medium text-textLight dark:text-textDark mb-2">
                                         <span>Spicy Arrabbiata (Jars)</span>
                                         <span class="text-primary">45 / 100</span>
                                     </div>
@@ -424,9 +420,9 @@
                                 </div>
 
                                 <div>
-                                    <div class="flex justify-between text-sm font-bold text-textLight dark:text-textDark mb-2">
+                                    <div class="flex justify-between text-sm font-medium text-textLight dark:text-textDark mb-2">
                                         <span>White Truffle Cream (Jars)</span>
-                                        <span class="text-red-500 font-black">0 / 50 (Out of Stock)</span>
+                                        <span class="text-red-500 font-semibold">0 / 50 (Out of Stock)</span>
                                     </div>
                                     <div class="w-full bg-bgLight dark:bg-bgDark rounded-full h-2 mb-1 border border-borderLight dark:border-borderDark overflow-hidden">
                                         <div class="bg-red-500 h-2 rounded-full" style="width: 0%"></div>
@@ -439,67 +435,67 @@
                 </div>
 
                 <div id="section-customers" class="page-section hidden space-y-6">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm block mb-1">CRM</span>
-                    <h2 class="font-serif text-3xl font-bold text-[var(--text-color)] tracking-tight mb-6">Customer Directory</h2>
+                    <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-1">CRM</span>
+                    <h2 class="font-serif text-3xl font-semibold text-[var(--text-color)] tracking-tight mb-6">Customer Directory</h2>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div class="bg-cardLight dark:bg-cardDark p-6 rounded-3xl border border-primary shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
-                            <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl">VIP</div>
+                            <div class="absolute top-0 right-0 bg-primary text-white text-[10px] font-medium px-3 py-1 rounded-bl-xl">VIP</div>
                             <div class="flex items-center gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center font-black text-lg border border-primary">AR</div>
+                                <div class="w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center font-semibold text-lg border border-primary">AR</div>
                                 <div>
-                                    <h3 class="font-bold text-[var(--text-color)]">Alex Rivera</h3>
+                                    <h3 class="font-medium text-[var(--text-color)]">Alex Rivera</h3>
                                     <p class="text-xs text-mutedLight dark:text-mutedDark">Joined Jan 2024</p>
                                 </div>
                             </div>
                             <div class="border-t border-borderLight dark:border-borderDark pt-4 flex justify-between text-sm">
-                                <span class="font-medium text-mutedLight dark:text-mutedDark">LTV: <strong class="text-[var(--text-color)]">$1,250</strong></span>
-                                <span class="font-medium text-mutedLight dark:text-mutedDark">Orders: <strong class="text-[var(--text-color)]">14</strong></span>
+                                <span class="font-medium text-mutedLight dark:text-mutedDark">LTV: <strong class="text-[var(--text-color)] font-semibold">$1,250</strong></span>
+                                <span class="font-medium text-mutedLight dark:text-mutedDark">Orders: <strong class="text-[var(--text-color)] font-semibold">14</strong></span>
                             </div>
                         </div>
 
                         <div class="bg-cardLight dark:bg-cardDark p-6 rounded-3xl border border-borderLight dark:border-borderDark shadow-sm hover:shadow-md transition-shadow">
                             <div class="flex items-center gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-full bg-bgLight dark:bg-bgDark text-mutedLight dark:text-mutedDark flex items-center justify-center font-black text-lg border border-borderLight dark:border-borderDark">SJ</div>
+                                <div class="w-12 h-12 rounded-full bg-bgLight dark:bg-bgDark text-mutedLight dark:text-mutedDark flex items-center justify-center font-semibold text-lg border border-borderLight dark:border-borderDark">SJ</div>
                                 <div>
-                                    <h3 class="font-bold text-[var(--text-color)]">Sarah Jenkins</h3>
+                                    <h3 class="font-medium text-[var(--text-color)]">Sarah Jenkins</h3>
                                     <p class="text-xs text-mutedLight dark:text-mutedDark">Joined Oct 2025</p>
                                 </div>
                             </div>
                             <div class="border-t border-borderLight dark:border-borderDark pt-4 flex justify-between text-sm">
-                                <span class="font-medium text-mutedLight dark:text-mutedDark">LTV: <strong class="text-[var(--text-color)]">$345</strong></span>
-                                <span class="font-medium text-mutedLight dark:text-mutedDark">Orders: <strong class="text-[var(--text-color)]">4</strong></span>
+                                <span class="font-medium text-mutedLight dark:text-mutedDark">LTV: <strong class="text-[var(--text-color)] font-semibold">$345</strong></span>
+                                <span class="font-medium text-mutedLight dark:text-mutedDark">Orders: <strong class="text-[var(--text-color)] font-semibold">4</strong></span>
                             </div>
                         </div>
 
                         <div class="bg-cardLight dark:bg-cardDark p-6 rounded-3xl border border-borderLight dark:border-borderDark shadow-sm hover:shadow-md transition-shadow">
                             <div class="flex items-center gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-full bg-bgLight dark:bg-bgDark text-mutedLight dark:text-mutedDark flex items-center justify-center font-black text-lg border border-borderLight dark:border-borderDark">DM</div>
+                                <div class="w-12 h-12 rounded-full bg-bgLight dark:bg-bgDark text-mutedLight dark:text-mutedDark flex items-center justify-center font-semibold text-lg border border-borderLight dark:border-borderDark">DM</div>
                                 <div>
-                                    <h3 class="font-bold text-[var(--text-color)]">David M.</h3>
+                                    <h3 class="font-medium text-[var(--text-color)]">David M.</h3>
                                     <p class="text-xs text-mutedLight dark:text-mutedDark">Joined Feb 2026</p>
                                 </div>
                             </div>
                             <div class="border-t border-borderLight dark:border-borderDark pt-4 flex justify-between text-sm">
-                                <span class="font-medium text-mutedLight dark:text-mutedDark">LTV: <strong class="text-[var(--text-color)]">$89</strong></span>
-                                <span class="font-medium text-mutedLight dark:text-mutedDark">Orders: <strong class="text-[var(--text-color)]">1</strong></span>
+                                <span class="font-medium text-mutedLight dark:text-mutedDark">LTV: <strong class="text-[var(--text-color)] font-semibold">$89</strong></span>
+                                <span class="font-medium text-mutedLight dark:text-mutedDark">Orders: <strong class="text-[var(--text-color)] font-semibold">1</strong></span>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div id="section-analytics" class="page-section hidden space-y-6">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm block mb-1">Reports</span>
-                    <h2 class="font-serif text-3xl font-bold text-[var(--text-color)] tracking-tight mb-6">Revenue Analytics</h2>
+                    <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-1">Reports</span>
+                    <h2 class="font-serif text-3xl font-semibold text-[var(--text-color)] tracking-tight mb-6">Revenue Analytics</h2>
 
                     <div class="card-section">
                         <div class="flex justify-between items-center mb-8 border-b border-borderLight dark:border-borderDark pb-4">
-                            <h3 class="font-bold text-[var(--text-color)]">Weekly Sales (Past 7 Days)</h3>
-                            <button class="text-primary text-sm font-bold border border-primary px-3 py-1 rounded-lg hover:bg-primary hover:text-white transition-colors">Download CSV</button>
+                            <h3 class="font-semibold text-[var(--text-color)]">Weekly Sales (Past 7 Days)</h3>
+                            <button class="text-primary text-sm font-medium border border-primary px-3 py-1 rounded-lg hover:bg-primary hover:text-white transition-colors">Download CSV</button>
                         </div>
 
                         <div class="relative h-64 w-full flex items-end justify-between gap-2 sm:gap-6 pt-10 border-b border-borderLight dark:border-borderDark pb-2 px-2 sm:px-10">
-                            <div class="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-mutedLight dark:text-mutedDark font-bold pb-2 opacity-50">
+                            <div class="absolute left-0 top-0 h-full flex flex-col justify-between text-xs text-mutedLight dark:text-mutedDark font-medium pb-2 opacity-50">
                                 <span>$5k</span>
                                 <span>$2.5k</span>
                                 <span>$0</span>
@@ -507,33 +503,33 @@
                             
                             <div class="w-full flex justify-between items-end h-full relative z-10 pl-8">
                                 <div class="w-1/12 bg-primary/40 hover:bg-primary rounded-t-md relative group transition-colors" style="height: 40%">
-                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$2,000</div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-medium py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$2,000</div>
                                 </div>
                                 <div class="w-1/12 bg-primary/40 hover:bg-primary rounded-t-md relative group transition-colors" style="height: 55%">
-                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$2,750</div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-medium py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$2,750</div>
                                 </div>
                                 <div class="w-1/12 bg-primary/40 hover:bg-primary rounded-t-md relative group transition-colors" style="height: 30%">
-                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$1,500</div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-medium py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$1,500</div>
                                 </div>
                                 <div class="w-1/12 bg-primary rounded-t-md relative group transition-colors shadow-[0_0_15px_rgba(224,159,62,0.5)]" style="height: 85%">
-                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-bold py-1 px-2 rounded opacity-100 transition-opacity pointer-events-none">$4,250</div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-medium py-1 px-2 rounded opacity-100 transition-opacity pointer-events-none">$4,250</div>
                                 </div>
                                 <div class="w-1/12 bg-primary/40 hover:bg-primary rounded-t-md relative group transition-colors" style="height: 60%">
-                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$3,000</div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-medium py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$3,000</div>
                                 </div>
                                 <div class="w-1/12 bg-primary/40 hover:bg-primary rounded-t-md relative group transition-colors" style="height: 75%">
-                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$3,750</div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-medium py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$3,750</div>
                                 </div>
                                 <div class="w-1/12 bg-primary/40 hover:bg-primary rounded-t-md relative group transition-colors" style="height: 95%">
-                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$4,750</div>
+                                    <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cardDark text-white text-xs font-medium py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">$4,750</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-full flex justify-between px-2 sm:px-10 pl-10 mt-3 text-xs font-bold text-mutedLight dark:text-mutedDark">
+                        <div class="w-full flex justify-between px-2 sm:px-10 pl-10 mt-3 text-xs font-medium text-mutedLight dark:text-mutedDark">
                             <span class="w-1/12 text-center">Mon</span>
                             <span class="w-1/12 text-center">Tue</span>
                             <span class="w-1/12 text-center">Wed</span>
-                            <span class="w-1/12 text-center text-primary">Thu</span>
+                            <span class="w-1/12 text-center text-primary font-semibold">Thu</span>
                             <span class="w-1/12 text-center">Fri</span>
                             <span class="w-1/12 text-center">Sat</span>
                             <span class="w-1/12 text-center">Sun</span>
@@ -542,17 +538,17 @@
                 </div>
 
                 <div id="section-settings" class="page-section hidden space-y-6">
-                    <span class="text-primary font-bold tracking-widest uppercase text-sm block mb-1">Configuration</span>
-                    <h2 class="font-serif text-3xl font-bold text-[var(--text-color)] tracking-tight mb-6">Store Settings</h2>
+                    <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-1">Configuration</span>
+                    <h2 class="font-serif text-3xl font-semibold text-[var(--text-color)] tracking-tight mb-6">Store Settings</h2>
                     
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         
                         <div class="card-section space-y-6">
-                            <h3 class="font-serif text-xl font-bold text-[var(--text-color)] border-b border-borderLight dark:border-borderDark pb-4">System Toggles</h3>
+                            <h3 class="font-serif text-xl font-semibold text-[var(--text-color)] border-b border-borderLight dark:border-borderDark pb-4">System Toggles</h3>
                             
                             <label class="flex items-center justify-between cursor-pointer group bg-bgLight dark:bg-bgDark p-4 rounded-xl border border-borderLight dark:border-borderDark">
                                 <div class="flex flex-col">
-                                    <span class="text-sm font-bold text-[var(--text-color)]">Storefront Status</span>
+                                    <span class="text-sm font-medium text-[var(--text-color)]">Storefront Status</span>
                                     <span class="text-xs font-medium text-green-500">Currently Accepting Orders</span>
                                 </div>
                                 <div class="relative inline-block w-12 align-middle select-none transition duration-200 ease-in">
@@ -563,7 +559,7 @@
 
                             <label class="flex items-center justify-between cursor-pointer group bg-bgLight dark:bg-bgDark p-4 rounded-xl border border-borderLight dark:border-borderDark">
                                 <div class="flex flex-col">
-                                    <span class="text-sm font-bold text-[var(--text-color)]">Vacation Mode</span>
+                                    <span class="text-sm font-medium text-[var(--text-color)]">Vacation Mode</span>
                                     <span class="text-xs font-medium text-mutedLight dark:text-mutedDark">Pause all shipments</span>
                                 </div>
                                 <div class="relative inline-block w-12 align-middle select-none transition duration-200 ease-in">
@@ -574,15 +570,15 @@
                         </div>
 
                         <div class="card-section space-y-6">
-                            <h3 class="font-serif text-xl font-bold text-[var(--text-color)] border-b border-borderLight dark:border-borderDark pb-4">Pricing Rules</h3>
+                            <h3 class="font-serif text-xl font-semibold text-[var(--text-color)] border-b border-borderLight dark:border-borderDark pb-4">Pricing Rules</h3>
                             
                             <div>
-                                <label class="block text-xs font-bold text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Standard Shipping Fee ($)</label>
+                                <label class="block text-xs font-medium text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Standard Shipping Fee ($)</label>
                                 <input type="number" value="9.99" class="input-field">
                             </div>
                             
                             <div>
-                                <label class="block text-xs font-bold text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Free Shipping Threshold ($)</label>
+                                <label class="block text-xs font-medium text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Free Shipping Threshold ($)</label>
                                 <input type="number" value="75.00" class="input-field">
                             </div>
 
