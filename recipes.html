@@ -12,7 +12,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- FIX: Removed 700 weights. Max weight is now strictly 600. Subheadings operate on 400 & 500 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     
     <script src="tailwind.js"></script>
     <script>
@@ -90,7 +91,7 @@
 
         .nav-link {
             position: relative;
-            font-weight: 500;
+            font-weight: 500; /* Stays at 500 within the 400-550 range */
             font-size: 0.95rem;
             transition: color 0.3s;
             color: var(--text-color);
@@ -215,7 +216,6 @@
                     </button>
 
                     <div class="hidden xl:flex items-center gap-4 2xl:gap-6 shrink-0 ml-1">
-                        <!-- Restored orange border and orange text -->
                         <a href="login.html" class="border-2 border-primary text-primary px-5 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-sm hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Login</a>
                         <a href="register.html" class="bg-primary text-white px-5 py-2.5 rounded-full font-semibold hover:bg-secondary transition-colors shadow-md hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Register</a>
                     </div>
@@ -303,10 +303,13 @@
         <section class="relative min-h-[100dvh] flex items-center justify-center pt-20 border-b border-theme" style="background-image: url('Images/Cacio\ e\ Pepe.jpg'); background-size: cover; background-position: center;">
             <div class="absolute inset-0 bg-black/60 dark:bg-black/80 z-0 transition-colors duration-300"></div>
             <div class="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center h-full">
+                <!-- Subheading at 500 (font-medium) -->
                 <span class="text-primary font-medium tracking-[0.2em] uppercase text-sm md:text-base mb-3 block drop-shadow-md animate-pulse w-full text-center">Culinary Inspiration</span>
+                <!-- Heading at 600 (font-semibold) -->
                 <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-tight drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)] mb-6 w-full text-center">
                     Master the Art of <br/> <span class="italic text-primary">Italian Cooking</span>.
                 </h1>
+                <!-- Subheading paragraph at 500 (font-medium) -->
                 <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-medium drop-shadow-md text-center w-full">
                     From 15-minute weeknight dinners to show-stopping weekend feasts. Discover recipes crafted to make our pasta and sauces shine.
                 </p>
@@ -318,7 +321,9 @@
             
             <div class="container mx-auto px-4 md:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16 flex flex-col items-center justify-center">
+                    <!-- Subheading at 500 (font-medium) -->
                     <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-3 text-center w-full">Browse by Mood</span>
+                    <!-- Heading at 600 (font-semibold) -->
                     <h2 class="font-serif text-4xl md:text-5xl font-semibold text-primary mb-6 leading-tight w-full text-center">Recipe Categories</h2>
                 </div>
 

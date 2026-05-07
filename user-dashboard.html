@@ -49,7 +49,7 @@
     <style type="text/tailwindcss">
         @layer components {
             .sidebar-link {
-                @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-all duration-300 text-mutedLight dark:text-mutedDark hover:bg-bgLight dark:hover:bg-bgDark hover:text-primary dark:hover:text-primary border-l-4 border-transparent cursor-pointer font-sans;
+                @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-mutedLight dark:text-mutedDark hover:bg-bgLight dark:hover:bg-bgDark hover:text-primary dark:hover:text-primary border-l-4 border-transparent cursor-pointer font-sans;
             }
             .sidebar-link.active {
                 @apply bg-cardLight dark:bg-bgDark shadow-sm text-primary border-l-4 border-primary;
@@ -58,7 +58,7 @@
                 @apply bg-cardLight dark:bg-cardDark p-6 rounded-3xl shadow-md border border-borderLight dark:border-borderDark transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl border-t-4 border-t-primary hover:border-primary;
             }
             .action-btn {
-                @apply bg-primary hover:bg-secondary text-white py-3 px-6 rounded-xl font-bold text-sm transition-all duration-300 shadow-[0_4px_15px_rgba(224,159,62,0.3)] hover:shadow-[0_6px_20px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 inline-flex items-center justify-center;
+                @apply bg-primary hover:bg-secondary text-white py-3 px-6 rounded-xl font-semibold text-sm transition-all duration-300 shadow-[0_4px_15px_rgba(224,159,62,0.3)] hover:shadow-[0_6px_20px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 inline-flex items-center justify-center;
             }
             .card-section {
                 @apply bg-cardLight dark:bg-cardDark rounded-3xl shadow-md border border-borderLight dark:border-borderDark p-6 md:p-8;
@@ -100,7 +100,7 @@
         <div class="container mx-auto px-4 md:px-6 lg:px-8 h-full flex justify-between items-center">
             
             <div class="flex items-center gap-2 sm:gap-4">
-                <button id="mobileMenuBtn" class="md:hidden text-textLight dark:text-textDark hover:text-primary transition-colors text-xl font-bold leading-none border-0 bg-transparent cursor-pointer">
+                <button id="mobileMenuBtn" class="md:hidden text-textLight dark:text-textDark hover:text-primary transition-colors text-xl font-semibold leading-none border-0 bg-transparent cursor-pointer">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -108,7 +108,7 @@
                     <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(224,159,62,0.4)] transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 shrink-0">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
-                    <span class="font-serif text-xl sm:text-2xl font-bold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap">Pasta<span class="text-primary">Perfetto</span></span>
+                    <span class="font-serif text-xl sm:text-2xl font-semibold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap">Pasta<span class="text-primary">Perfetto</span></span>
                 </a>
             </div>
 
@@ -116,7 +116,7 @@
                 
                 <div class="flex items-center gap-1 sm:gap-2 ltr:mr-2 rtl:ml-2 border-r border-borderLight dark:border-borderDark ltr:pr-2 sm:ltr:pr-4 rtl:pl-2 sm:rtl:pl-4">
                     <button class="w-10 h-10 bg-cardLight dark:bg-cardDark rounded-full border border-borderLight dark:border-borderDark flex items-center justify-center text-textLight dark:text-textDark transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary shrink-0 shadow-sm cursor-pointer" id="rtl-toggle-btn" title="Toggle RTL">
-                        <span class="text-[10px] font-black">RTL</span>
+                        <span class="text-[10px] font-medium">RTL</span>
                     </button>
                     <button class="w-10 h-10 bg-cardLight dark:bg-cardDark rounded-full border border-borderLight dark:border-borderDark flex items-center justify-center text-textLight dark:text-textDark transition-all duration-300 hover:bg-primary hover:text-white hover:border-primary shrink-0 shadow-sm cursor-pointer" id="theme-toggle-btn" title="Toggle Dark Mode">
                         <i class="fas fa-moon transition-transform" id="theme-icon"></i>
@@ -125,10 +125,10 @@
 
                 <div class="flex items-center gap-3 cursor-pointer group">
                     <div class="ltr:text-right rtl:text-left hidden lg:block">
-                        <p class="text-sm font-bold text-textLight dark:text-textDark leading-tight">Alex Rivera</p>
-                        <p class="text-[10px] font-black uppercase tracking-wider text-primary">La Famiglia VIP</p>
+                        <p class="text-sm font-medium text-textLight dark:text-textDark leading-tight">Alex Rivera</p>
+                        <p class="text-[10px] font-medium uppercase tracking-wider text-primary">La Famiglia VIP</p>
                     </div>
-                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-black text-sm border-2 border-transparent transition-all shadow-[0_0_10px_rgba(224,159,62,0.4)] group-hover:scale-105 tracking-widest">
+                    <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-semibold text-sm border-2 border-transparent transition-all shadow-[0_0_10px_rgba(224,159,62,0.4)] group-hover:scale-105 tracking-widest">
                         AR
                     </div>
                 </div>
@@ -140,7 +140,7 @@
         
         <aside id="sidebar" class="w-64 bg-cardLight dark:bg-cardDark border-r border-borderLight dark:border-borderDark flex-shrink-0 flex flex-col transition-transform duration-300 absolute md:relative z-40 h-full ltr:-translate-x-full ltr:md:translate-x-0 rtl:translate-x-full rtl:md:translate-x-0 shadow-2xl md:shadow-none">
             <div class="p-5 flex-1 overflow-y-auto space-y-2 mt-4">
-                <p class="text-[10px] font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest mb-4 ltr:ml-4 rtl:mr-4">My Account</p>
+                <p class="text-[10px] font-medium text-mutedLight dark:text-mutedDark uppercase tracking-widest mb-4 ltr:ml-4 rtl:mr-4">My Account</p>
                 
                 <a class="sidebar-link active" onclick="switchTab(event, 'section-stats')">
                     <i class="fas fa-layer-group w-5 text-center"></i> Dashboard
@@ -157,12 +157,12 @@
                 
                 <div class="my-6 border-t border-borderLight dark:border-borderDark"></div>
                 
-                <p class="text-[10px] font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest mb-4 ltr:ml-4 rtl:mr-4">Settings</p>
+                <p class="text-[10px] font-medium text-mutedLight dark:text-mutedDark uppercase tracking-widest mb-4 ltr:ml-4 rtl:mr-4">Settings</p>
                 <a class="sidebar-link" onclick="switchTab(event, 'section-settings')">
                     <i class="fas fa-user-cog w-5 text-center"></i> Profile Settings
                 </a>
                 
-                <a href="login.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-bold transition-all duration-300 text-red-500 hover:text-white hover:bg-red-500 mt-4 border-none cursor-pointer no-underline shadow-sm hover:shadow-md">
+                <a href="login.html" class="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 text-red-500 hover:text-white hover:bg-red-500 mt-4 border-none cursor-pointer no-underline shadow-sm hover:shadow-md">
                     <i class="fas fa-sign-out-alt w-5 text-center ltr:rotate-0 rtl:rotate-180"></i>
                     Logout
                 </a>
@@ -170,9 +170,9 @@
 
             <div class="p-5 m-4 bg-bgLight dark:bg-bgDark rounded-2xl border border-borderLight dark:border-borderDark relative overflow-hidden group shadow-sm hover:border-primary transition-colors">
                 <div class="absolute -right-4 -top-4 w-20 h-20 bg-primary/10 rounded-full blur-xl transition-all"></div>
-                <h4 class="text-textLight dark:text-textDark font-serif text-lg font-bold mb-1">Refer a Friend</h4>
+                <h4 class="text-textLight dark:text-textDark font-serif text-lg font-semibold mb-1">Refer a Friend</h4>
                 <p class="text-xs text-mutedLight dark:text-mutedDark mb-4 font-medium">Give $15, get $15 in Pasta Points.</p>
-                <button class="w-full bg-primary/10 hover:bg-primary text-primary hover:text-white text-xs font-bold py-2 rounded-lg transition-colors border border-primary/20">Get Invite Link</button>
+                <button class="w-full bg-primary/10 hover:bg-primary text-primary hover:text-white text-xs font-medium py-2 rounded-lg transition-colors border border-primary/20">Get Invite Link</button>
             </div>
         </aside>
 
@@ -184,7 +184,7 @@
                 <div id="section-stats" class="page-section block animate-fade-in-up space-y-8">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-borderLight dark:border-borderDark pb-6">
                         <div>
-                            <h1 class="font-serif text-3xl md:text-4xl font-bold text-[var(--text-color)] tracking-tight mb-2">
+                            <h1 class="font-serif text-3xl md:text-4xl font-semibold text-[var(--text-color)] tracking-tight mb-2">
                                 Buonasera, Alex
                             </h1>
                             <p class="text-mutedLight dark:text-mutedDark text-sm font-medium">Here is your PastaPerfetto account overview.</p>
@@ -197,40 +197,40 @@
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div class="stat-card group">
                             <div class="flex justify-between items-start mb-6">
-                                <div class="text-primary text-xs font-black uppercase tracking-wider bg-primary/10 px-3 py-1.5 rounded-lg border border-primary/20"><i class="fas fa-crown mr-1"></i> Membership</div>
-                                <span class="bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-200 dark:border-green-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Active</span>
+                                <div class="text-primary text-xs font-medium uppercase tracking-wider bg-primary/10 px-3 py-1.5 rounded-lg border border-primary/20"><i class="fas fa-crown mr-1"></i> Membership</div>
+                                <span class="bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-200 dark:border-green-800 text-[10px] font-medium px-3 py-1 rounded-full uppercase tracking-wider">Active</span>
                             </div>
-                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-bold uppercase tracking-widest mb-1">Current Tier</h3>
-                            <p class="font-serif text-3xl font-bold text-textLight dark:text-textDark group-hover:text-primary transition-colors">La Famiglia</p>
+                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-medium uppercase tracking-widest mb-1">Current Tier</h3>
+                            <p class="font-serif text-3xl font-semibold text-textLight dark:text-textDark group-hover:text-primary transition-colors">La Famiglia</p>
                         </div>
 
                         <div class="stat-card group">
                             <div class="flex justify-between items-start mb-6">
-                                <div class="text-primary text-xs font-black uppercase tracking-wider bg-primary/10 px-3 py-1.5 rounded-lg border border-primary/20"><i class="fas fa-star mr-1"></i> Rewards</div>
+                                <div class="text-primary text-xs font-medium uppercase tracking-wider bg-primary/10 px-3 py-1.5 rounded-lg border border-primary/20"><i class="fas fa-star mr-1"></i> Rewards</div>
                             </div>
-                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-bold uppercase tracking-widest mb-1">Pasta Points</h3>
-                            <p class="font-sans text-3xl font-black text-textLight dark:text-textDark group-hover:text-primary transition-colors">1,450 <span class="text-sm font-bold text-mutedLight dark:text-mutedDark">pts</span></p>
+                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-medium uppercase tracking-widest mb-1">Pasta Points</h3>
+                            <p class="font-sans text-3xl font-semibold text-textLight dark:text-textDark group-hover:text-primary transition-colors">1,450 <span class="text-sm font-medium text-mutedLight dark:text-mutedDark">pts</span></p>
                         </div>
 
                         <div class="stat-card group">
                             <div class="flex justify-between items-start mb-6">
-                                <div class="text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-wider bg-blue-100 dark:bg-blue-900/30 px-3 py-1.5 rounded-lg border border-blue-200 dark:border-blue-800"><i class="fas fa-truck-fast mr-1"></i> Upcoming</div>
-                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Processing</span>
+                                <div class="text-blue-600 dark:text-blue-400 text-xs font-medium uppercase tracking-wider bg-blue-100 dark:bg-blue-900/30 px-3 py-1.5 rounded-lg border border-blue-200 dark:border-blue-800"><i class="fas fa-truck-fast mr-1"></i> Upcoming</div>
+                                <span class="bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-800 text-[10px] font-medium px-3 py-1 rounded-full uppercase tracking-wider">Processing</span>
                             </div>
-                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-bold uppercase tracking-widest mb-1">Next Delivery</h3>
-                            <p class="font-sans text-3xl font-black text-textLight dark:text-textDark group-hover:text-primary transition-colors">Nov 12 <span class="text-sm font-bold text-mutedLight dark:text-mutedDark">via FedEx</span></p>
+                            <h3 class="text-mutedLight dark:text-mutedDark text-xs font-medium uppercase tracking-widest mb-1">Next Delivery</h3>
+                            <p class="font-sans text-3xl font-semibold text-textLight dark:text-textDark group-hover:text-primary transition-colors">Nov 12 <span class="text-sm font-medium text-mutedLight dark:text-mutedDark">via FedEx</span></p>
                         </div>
                     </div>
 
                     <div class="mt-12 pt-8 border-t border-borderLight dark:border-borderDark">
-                        <h2 class="font-serif text-2xl font-bold text-[var(--text-color)] mb-6">Quick Access</h2>
+                        <h2 class="font-serif text-2xl font-semibold text-[var(--text-color)] mb-6">Quick Access</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                             
                             <button onclick="switchTab(event, 'section-orders')" class="bg-cardLight dark:bg-cardDark p-8 rounded-3xl border border-borderLight dark:border-borderDark hover:border-primary hover:bg-primary/5 transition-all text-center group shadow-sm hover:shadow-md cursor-pointer">
                                 <div class="w-16 h-16 mx-auto bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark rounded-full flex items-center justify-center text-primary text-2xl mb-4 group-hover:scale-110 transition-transform shadow-sm">
                                     <i class="fas fa-box-open"></i>
                                 </div>
-                                <h3 class="font-bold text-textLight dark:text-textDark">Order History</h3>
+                                <h3 class="font-medium text-textLight dark:text-textDark">Order History</h3>
                                 <p class="text-xs text-mutedLight dark:text-mutedDark mt-2">Track & view past orders</p>
                             </button>
 
@@ -238,7 +238,7 @@
                                 <div class="w-16 h-16 mx-auto bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark rounded-full flex items-center justify-center text-primary text-2xl mb-4 group-hover:scale-110 transition-transform shadow-sm">
                                     <i class="fas fa-crown"></i>
                                 </div>
-                                <h3 class="font-bold text-textLight dark:text-textDark">My Subscription</h3>
+                                <h3 class="font-medium text-textLight dark:text-textDark">My Subscription</h3>
                                 <p class="text-xs text-mutedLight dark:text-mutedDark mt-2">Manage your VIP box</p>
                             </button>
 
@@ -246,7 +246,7 @@
                                 <div class="w-16 h-16 mx-auto bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark rounded-full flex items-center justify-center text-primary text-2xl mb-4 group-hover:scale-110 transition-transform shadow-sm">
                                     <i class="fas fa-book-open"></i>
                                 </div>
-                                <h3 class="font-bold text-textLight dark:text-textDark">Saved Recipes</h3>
+                                <h3 class="font-medium text-textLight dark:text-textDark">Saved Recipes</h3>
                                 <p class="text-xs text-mutedLight dark:text-mutedDark mt-2">Your favorite pairings</p>
                             </button>
 
@@ -254,7 +254,7 @@
                                 <div class="w-16 h-16 mx-auto bg-bgLight dark:bg-bgDark border border-borderLight dark:border-borderDark rounded-full flex items-center justify-center text-primary text-2xl mb-4 group-hover:scale-110 transition-transform shadow-sm">
                                     <i class="fas fa-user-cog"></i>
                                 </div>
-                                <h3 class="font-bold text-textLight dark:text-textDark">Profile Settings</h3>
+                                <h3 class="font-medium text-textLight dark:text-textDark">Profile Settings</h3>
                                 <p class="text-xs text-mutedLight dark:text-mutedDark mt-2">Update details & address</p>
                             </button>
 
@@ -263,84 +263,84 @@
                 </div>
 
                 <div id="section-orders" class="page-section hidden space-y-6">
-                    <h2 class="font-serif text-3xl font-bold text-[var(--text-color)] tracking-tight mb-2">Order History</h2>
+                    <h2 class="font-serif text-3xl font-semibold text-[var(--text-color)] tracking-tight mb-2">Order History</h2>
                     <div class="card-section p-0 overflow-hidden">
                         <div class="overflow-x-auto">
                             <table class="w-full text-left border-collapse">
                                 <thead>
                                     <tr class="bg-bgLight dark:bg-bgDark border-b border-borderLight dark:border-borderDark">
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest">Order ID</th>
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest">Items</th>
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest">Date</th>
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest">Status</th>
-                                        <th class="px-6 py-5 text-xs font-black text-mutedLight dark:text-mutedDark uppercase tracking-widest ltr:text-right rtl:text-left">Total</th>
+                                        <th class="px-6 py-5 text-xs font-medium text-mutedLight dark:text-mutedDark uppercase tracking-widest">Order ID</th>
+                                        <th class="px-6 py-5 text-xs font-medium text-mutedLight dark:text-mutedDark uppercase tracking-widest">Items</th>
+                                        <th class="px-6 py-5 text-xs font-medium text-mutedLight dark:text-mutedDark uppercase tracking-widest">Date</th>
+                                        <th class="px-6 py-5 text-xs font-medium text-mutedLight dark:text-mutedDark uppercase tracking-widest">Status</th>
+                                        <th class="px-6 py-5 text-xs font-medium text-mutedLight dark:text-mutedDark uppercase tracking-widest ltr:text-right rtl:text-left">Total</th>
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-borderLight dark:divide-borderDark">
                                     
                                     <tr class="hover:bg-bgLight dark:hover:bg-bgDark transition-colors group cursor-pointer">
-                                        <td class="px-6 py-5 text-sm font-bold text-textLight dark:text-textDark">#PP-8472</td>
+                                        <td class="px-6 py-5 text-sm font-medium text-textLight dark:text-textDark">#PP-8472</td>
                                         <td class="px-6 py-5">
                                             <div class="flex items-center gap-3">
                                                 <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-sm border border-primary/20 shrink-0"><i class="fas fa-box-open"></i></div>
-                                                <span class="text-sm font-bold text-textLight dark:text-textDark group-hover:text-primary transition-colors">La Famiglia Monthly Box</span>
+                                                <span class="text-sm font-medium text-textLight dark:text-textDark group-hover:text-primary transition-colors">La Famiglia Monthly Box</span>
                                             </div>
                                         </td>
                                         <td class="px-6 py-5 text-sm font-medium text-mutedLight dark:text-mutedDark">Oct 12, 2026</td>
                                         <td class="px-6 py-5">
-                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-200 dark:border-green-800">
                                                 Delivered
                                             </span>
                                         </td>
-                                        <td class="px-6 py-5 text-sm font-black text-textLight dark:text-textDark ltr:text-right rtl:text-left">$89.00</td>
+                                        <td class="px-6 py-5 text-sm font-medium text-textLight dark:text-textDark ltr:text-right rtl:text-left">$89.00</td>
                                     </tr>
                                     
                                     <tr class="hover:bg-bgLight dark:hover:bg-bgDark transition-colors group cursor-pointer">
-                                        <td class="px-6 py-5 text-sm font-bold text-textLight dark:text-textDark">#PP-8415</td>
+                                        <td class="px-6 py-5 text-sm font-medium text-textLight dark:text-textDark">#PP-8415</td>
                                         <td class="px-6 py-5">
                                             <div class="flex items-center gap-3">
                                                 <div class="w-10 h-10 rounded-lg bg-cardLight dark:bg-cardDark flex items-center justify-center text-mutedLight dark:text-mutedDark text-sm border border-borderLight dark:border-borderDark shrink-0"><i class="fas fa-bottle-droplet"></i></div>
-                                                <span class="text-sm font-bold text-textLight dark:text-textDark group-hover:text-primary transition-colors">White Truffle Oil (250ml)</span>
+                                                <span class="text-sm font-medium text-textLight dark:text-textDark group-hover:text-primary transition-colors">White Truffle Oil (250ml)</span>
                                             </div>
                                         </td>
                                         <td class="px-6 py-5 text-sm font-medium text-mutedLight dark:text-mutedDark">Sep 28, 2026</td>
                                         <td class="px-6 py-5">
-                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 border border-green-200 dark:border-green-800">
                                                 Delivered
                                             </span>
                                         </td>
-                                        <td class="px-6 py-5 text-sm font-black text-textLight dark:text-textDark ltr:text-right rtl:text-left">$35.00</td>
+                                        <td class="px-6 py-5 text-sm font-medium text-textLight dark:text-textDark ltr:text-right rtl:text-left">$35.00</td>
                                     </tr>
 
                                     <tr class="hover:bg-bgLight dark:hover:bg-bgDark transition-colors group cursor-pointer">
-                                        <td class="px-6 py-5 text-sm font-bold text-textLight dark:text-textDark">#PP-8302</td>
+                                        <td class="px-6 py-5 text-sm font-medium text-textLight dark:text-textDark">#PP-8302</td>
                                         <td class="px-6 py-5">
                                             <div class="flex items-center gap-3">
                                                 <div class="w-10 h-10 rounded-lg bg-cardLight dark:bg-cardDark flex items-center justify-center text-mutedLight dark:text-mutedDark text-sm border border-borderLight dark:border-borderDark shrink-0"><i class="fas fa-wheat-awn"></i></div>
-                                                <span class="text-sm font-bold text-textLight dark:text-textDark group-hover:text-primary transition-colors">A La Carte: Tonnarelli & Sauce</span>
+                                                <span class="text-sm font-medium text-textLight dark:text-textDark group-hover:text-primary transition-colors">A La Carte: Tonnarelli & Sauce</span>
                                             </div>
                                         </td>
                                         <td class="px-6 py-5 text-sm font-medium text-mutedLight dark:text-mutedDark">Sep 12, 2026</td>
                                         <td class="px-6 py-5">
-                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-cardLight dark:bg-bgDark text-mutedLight dark:text-mutedDark border border-borderLight dark:border-borderDark">
+                                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cardLight dark:bg-bgDark text-mutedLight dark:text-mutedDark border border-borderLight dark:border-borderDark">
                                                 Completed
                                             </span>
                                         </td>
-                                        <td class="px-6 py-5 text-sm font-black text-textLight dark:text-textDark ltr:text-right rtl:text-left">$28.00</td>
+                                        <td class="px-6 py-5 text-sm font-medium text-textLight dark:text-textDark ltr:text-right rtl:text-left">$28.00</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="p-4 border-t border-borderLight dark:border-borderDark text-center">
-                            <button class="text-sm font-bold text-primary hover:text-secondary transition-colors">View All Receipts</button>
+                            <button class="text-sm font-medium text-primary hover:text-secondary transition-colors">View All Receipts</button>
                         </div>
                     </div>
                 </div>
 
                 <div id="section-subscription" class="page-section hidden space-y-6">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-2">
-                        <h2 class="font-serif text-3xl font-bold text-[var(--text-color)] tracking-tight">My Subscription</h2>
-                        <button class="bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark hover:text-primary font-bold text-sm py-2.5 px-5 rounded-xl transition-colors border border-borderLight dark:border-borderDark shadow-sm hover:shadow-md">
+                        <h2 class="font-serif text-3xl font-semibold text-[var(--text-color)] tracking-tight">My Subscription</h2>
+                        <button class="bg-bgLight dark:bg-bgDark text-textLight dark:text-textDark hover:text-primary font-medium text-sm py-2.5 px-5 rounded-xl transition-colors border border-borderLight dark:border-borderDark shadow-sm hover:shadow-md">
                             <i class="fas fa-pause mr-2"></i> Pause Subscription
                         </button>
                     </div>
@@ -350,7 +350,7 @@
                         <div class="card-section flex flex-col h-full border-t-4 border-t-primary">
                             <div class="flex justify-between items-start mb-6 border-b border-borderLight dark:border-borderDark pb-5">
                                 <div>
-                                    <h3 class="font-serif text-2xl font-bold text-textLight dark:text-textDark">November Box</h3>
+                                    <h3 class="font-serif text-2xl font-semibold text-textLight dark:text-textDark">November Box</h3>
                                     <p class="text-sm font-medium text-mutedLight dark:text-mutedDark mt-1">Ships on Nov 10, 2026</p>
                                 </div>
                                 <div class="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-xl">
@@ -359,7 +359,7 @@
                             </div>
                             
                             <div class="flex-grow">
-                                <div class="flex justify-between text-xs font-black uppercase tracking-wider text-textLight dark:text-textDark mb-3">
+                                <div class="flex justify-between text-xs font-medium uppercase tracking-wider text-textLight dark:text-textDark mb-3">
                                     <span>Preparation Status</span>
                                     <span class="text-primary">Curating Items</span>
                                 </div>
@@ -369,7 +369,7 @@
                                     </div>
                                 </div>
 
-                                <h4 class="font-bold text-textLight dark:text-textDark mb-3">What's Inside (Chef's Selection):</h4>
+                                <h4 class="font-semibold text-textLight dark:text-textDark mb-3">What's Inside (Chef's Selection):</h4>
                                 <ul class="space-y-3">
                                     <li class="flex items-center gap-3 text-sm font-medium text-mutedLight dark:text-mutedDark"><i class="fas fa-check text-primary"></i> Fresh Egg Pappardelle (1lb)</li>
                                     <li class="flex items-center gap-3 text-sm font-medium text-mutedLight dark:text-mutedDark"><i class="fas fa-check text-primary"></i> Squid Ink Linguine (1lb)</li>
@@ -379,7 +379,7 @@
                             </div>
 
                             <div class="mt-8 pt-5 border-t border-borderLight dark:border-borderDark">
-                                <button class="w-full text-center text-sm font-bold text-primary hover:text-secondary transition-colors border border-primary hover:border-secondary py-3 rounded-xl">Customize This Box</button>
+                                <button class="w-full text-center text-sm font-medium text-primary hover:text-secondary transition-colors border border-primary hover:border-secondary py-3 rounded-xl">Customize This Box</button>
                             </div>
                         </div>
 
@@ -388,7 +388,7 @@
                             
                             <div class="flex justify-between items-start mb-6 border-b border-[#333] pb-5 relative z-10">
                                 <div>
-                                    <h3 class="font-serif text-2xl font-bold">La Famiglia VIP</h3>
+                                    <h3 class="font-serif text-2xl font-semibold">La Famiglia VIP</h3>
                                     <p class="text-sm font-medium text-gray-400 mt-1">$89.00 / month</p>
                                 </div>
                                 <div class="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white text-xl">
@@ -397,7 +397,7 @@
                             </div>
                             
                             <div class="flex-grow relative z-10">
-                                <h4 class="font-bold mb-4 text-primary uppercase tracking-widest text-xs">Your Benefits</h4>
+                                <h4 class="font-medium mb-4 text-primary uppercase tracking-widest text-xs">Your Benefits</h4>
                                 <ul class="space-y-4">
                                     <li class="flex items-center gap-3 text-sm font-medium text-gray-300">
                                         <div class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 shrink-0"><i class="fas fa-truck-fast text-primary"></i></div>
@@ -416,14 +416,14 @@
 
                             <div class="mt-8 relative z-10">
                                 <p class="text-xs text-gray-500 mb-3 text-center">Next billing date: Nov 1, 2026</p>
-                                <button class="w-full text-center text-sm font-bold bg-white text-black hover:bg-primary hover:text-white transition-colors py-3 rounded-xl shadow-lg">Manage Billing</button>
+                                <button class="w-full text-center text-sm font-medium bg-white text-black hover:bg-primary hover:text-white transition-colors py-3 rounded-xl shadow-lg">Manage Billing</button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div id="section-recipes" class="page-section hidden space-y-6">
-                    <h2 class="font-serif text-3xl font-bold text-[var(--text-color)] tracking-tight mb-2">Saved Recipes</h2>
+                    <h2 class="font-serif text-3xl font-semibold text-[var(--text-color)] tracking-tight mb-2">Saved Recipes</h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         
@@ -433,12 +433,12 @@
                                 <div class="absolute top-4 right-4 w-10 h-10 bg-bgLight dark:bg-bgDark rounded-full flex items-center justify-center text-primary border border-borderLight dark:border-borderDark shadow-sm cursor-pointer transition-colors z-10"><i class="fas fa-heart"></i></div>
                             </div>
                             <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-xs font-bold text-mutedLight dark:text-mutedDark uppercase tracking-wider mb-3">
+                                <div class="flex items-center gap-4 text-xs font-medium text-mutedLight dark:text-mutedDark uppercase tracking-wider mb-3">
                                     <span><i class="far fa-clock text-primary mr-1"></i> 45 Min</span>
                                 </div>
-                                <h3 class="font-serif text-xl font-bold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors">Tonnarelli Cacio e Pepe</h3>
+                                <h3 class="font-serif text-xl font-semibold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors">Tonnarelli Cacio e Pepe</h3>
                                 <p class="text-sm text-mutedLight dark:text-mutedDark font-medium mb-4 flex-grow">Master the emulsion. Only three ingredients stand between you and Roman perfection.</p>
-                                <a href="recipes.html" class="inline-flex items-center gap-2 font-bold text-[var(--text-color)] border-b-2 border-primary pb-1 self-start hover:text-primary transition-colors">View Recipe <i class="fas fa-arrow-right text-xs"></i></a>
+                                <a href="recipes.html" class="inline-flex items-center gap-2 font-medium text-[var(--text-color)] border-b-2 border-primary pb-1 self-start hover:text-primary transition-colors">View Recipe <i class="fas fa-arrow-right text-xs"></i></a>
                             </div>
                         </div>
 
@@ -448,12 +448,12 @@
                                 <div class="absolute top-4 right-4 w-10 h-10 bg-bgLight dark:bg-bgDark rounded-full flex items-center justify-center text-primary border border-borderLight dark:border-borderDark shadow-sm cursor-pointer transition-colors z-10"><i class="fas fa-heart"></i></div>
                             </div>
                             <div class="p-6 flex flex-col flex-grow">
-                                <div class="flex items-center gap-4 text-xs font-bold text-mutedLight dark:text-mutedDark uppercase tracking-wider mb-3">
+                                <div class="flex items-center gap-4 text-xs font-medium text-mutedLight dark:text-mutedDark uppercase tracking-wider mb-3">
                                     <span><i class="far fa-clock text-primary mr-1"></i> 15 Min</span>
                                 </div>
-                                <h3 class="font-serif text-xl font-bold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors">Spicy Penne Arrabbiata</h3>
+                                <h3 class="font-serif text-xl font-semibold text-[var(--text-color)] mb-2 group-hover:text-primary transition-colors">Spicy Penne Arrabbiata</h3>
                                 <p class="text-sm text-mutedLight dark:text-mutedDark font-medium mb-4 flex-grow">A fiery classic using our bronze-die Penne Rigate and signature spicy tomato sauce.</p>
-                                <a href="recipes.html" class="inline-flex items-center gap-2 font-bold text-[var(--text-color)] border-b-2 border-primary pb-1 self-start hover:text-primary transition-colors">View Recipe <i class="fas fa-arrow-right text-xs"></i></a>
+                                <a href="recipes.html" class="inline-flex items-center gap-2 font-medium text-[var(--text-color)] border-b-2 border-primary pb-1 self-start hover:text-primary transition-colors">View Recipe <i class="fas fa-arrow-right text-xs"></i></a>
                             </div>
                         </div>
 
@@ -462,7 +462,7 @@
                                 <div class="w-20 h-20 rounded-full bg-cardLight dark:bg-cardDark border border-borderLight dark:border-borderDark flex items-center justify-center text-3xl text-primary mx-auto mb-4 shadow-sm group-hover:scale-110 transition-transform">
                                     <i class="fas fa-search"></i>
                                 </div>
-                                <h3 class="font-serif text-xl font-bold text-[var(--text-color)] mb-2">Find More Inspiration</h3>
+                                <h3 class="font-serif text-xl font-semibold text-[var(--text-color)] mb-2">Find More Inspiration</h3>
                                 <p class="text-sm text-mutedLight dark:text-mutedDark font-medium text-center">Browse our collection of Chef Marco's favorite dishes.</p>
                             </div>
                         </div>
@@ -471,30 +471,30 @@
                 </div>
 
                 <div id="section-settings" class="page-section hidden space-y-6">
-                    <h2 class="font-serif text-3xl font-bold text-[var(--text-color)] tracking-tight mb-2">Account Settings</h2>
+                    <h2 class="font-serif text-3xl font-semibold text-[var(--text-color)] tracking-tight mb-2">Account Settings</h2>
                     
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                         
                         <div class="card-section lg:col-span-2 space-y-8">
                             <div class="flex justify-between items-center border-b border-borderLight dark:border-borderDark pb-4">
-                                <h3 class="font-serif text-2xl font-bold text-[var(--text-color)]">Personal Details</h3>
+                                <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)]">Personal Details</h3>
                             </div>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block text-xs font-bold text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Full Name</label>
+                                    <label class="block text-xs font-medium text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Full Name</label>
                                     <input type="text" value="Alex Rivera" class="input-field">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Email Address</label>
+                                    <label class="block text-xs font-medium text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Email Address</label>
                                     <input type="email" value="alex.rivera@example.com" class="input-field">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Phone Number</label>
+                                    <label class="block text-xs font-medium text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Phone Number</label>
                                     <input type="tel" value="+1 (555) 123-4567" class="input-field">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Dietary Preferences</label>
+                                    <label class="block text-xs font-medium text-mutedLight dark:text-mutedDark mb-2 uppercase tracking-widest">Dietary Preferences</label>
                                     <select class="input-field appearance-none cursor-pointer">
                                         <option value="none">None (Standard)</option>
                                         <option value="veg" selected>Vegetarian Preferred</option>
@@ -511,11 +511,11 @@
                         <div class="space-y-8 lg:col-span-1">
                             
                             <div class="card-section space-y-6">
-                                <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] border-b border-borderLight dark:border-borderDark pb-4">Notifications</h3>
+                                <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] border-b border-borderLight dark:border-borderDark pb-4">Notifications</h3>
                                 
                                 <label class="flex items-center justify-between cursor-pointer group">
                                     <div class="flex flex-col">
-                                        <span class="text-sm font-bold text-[var(--text-color)]">Delivery Tracking</span>
+                                        <span class="text-sm font-medium text-[var(--text-color)]">Delivery Tracking</span>
                                         <span class="text-xs font-medium text-mutedLight dark:text-mutedDark">SMS updates on your box</span>
                                     </div>
                                     <input type="checkbox" checked class="w-5 h-5 text-primary bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded focus:ring-primary focus:ring-2 cursor-pointer transition-colors">
@@ -523,7 +523,7 @@
                                 
                                 <label class="flex items-center justify-between cursor-pointer group">
                                     <div class="flex flex-col">
-                                        <span class="text-sm font-bold text-[var(--text-color)]">Weekly Recipes</span>
+                                        <span class="text-sm font-medium text-[var(--text-color)]">Weekly Recipes</span>
                                         <span class="text-xs font-medium text-mutedLight dark:text-mutedDark">Friday Chef newsletter</span>
                                     </div>
                                     <input type="checkbox" checked class="w-5 h-5 text-primary bg-bgLight dark:bg-bgDark border-borderLight dark:border-borderDark rounded focus:ring-primary focus:ring-2 cursor-pointer transition-colors">
@@ -531,17 +531,17 @@
                             </div>
                             
                             <div class="card-section space-y-6">
-                                <h3 class="font-serif text-2xl font-bold text-[var(--text-color)] border-b border-borderLight dark:border-borderDark pb-4">Shipping Address</h3>
+                                <h3 class="font-serif text-2xl font-semibold text-[var(--text-color)] border-b border-borderLight dark:border-borderDark pb-4">Shipping Address</h3>
                                 
                                 <div class="bg-bgLight dark:bg-bgDark p-5 rounded-2xl border border-borderLight dark:border-borderDark shadow-sm relative group">
                                     <div class="flex justify-between items-start mb-3">
-                                        <span class="text-xs font-black text-primary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-lg border border-primary/20">Home (Default)</span>
+                                        <span class="text-xs font-medium text-primary uppercase tracking-wider bg-primary/10 px-3 py-1 rounded-lg border border-primary/20">Home (Default)</span>
                                         <button class="text-mutedLight dark:text-mutedDark hover:text-primary transition-colors"><i class="fas fa-edit text-sm"></i></button>
                                     </div>
                                     <p class="text-sm text-textLight dark:text-textDark leading-relaxed font-medium">123 Culinary Lane, Apt 4B<br>Food District, NY 10001</p>
                                 </div>
                                 
-                                <button class="w-full text-sm font-bold text-mutedLight dark:text-mutedDark hover:text-primary dark:hover:text-primary py-4 border-2 border-dashed border-borderLight dark:border-borderDark hover:border-primary/50 dark:hover:border-primary/50 rounded-2xl transition-all flex items-center justify-center gap-2">
+                                <button class="w-full text-sm font-medium text-mutedLight dark:text-mutedDark hover:text-primary dark:hover:text-primary py-4 border-2 border-dashed border-borderLight dark:border-borderDark hover:border-primary/50 dark:hover:border-primary/50 rounded-2xl transition-all flex items-center justify-center gap-2">
                                     <i class="fas fa-plus"></i> Add New Address
                                 </button>
                             </div>

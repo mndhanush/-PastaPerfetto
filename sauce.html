@@ -173,24 +173,24 @@
 
                 <div class="hidden xl:flex items-center space-x-4 2xl:space-x-8 rtl:space-x-reverse mr-4 2xl:mr-8">
                     <div class="relative group cursor-pointer py-6 shrink-0">
-                        <span class="nav-link flex items-center gap-1 cursor-pointer">Home <i class="fas fa-chevron-down text-xs ml-1"></i></span>
+                        <span class="nav-link flex items-center gap-1 cursor-pointer font-medium">Home <i class="fas fa-chevron-down text-xs ml-1"></i></span>
                         <div class="dropdown-menu absolute z-50 top-full left-0 rtl:right-0 rtl:left-auto mt-[-10px] w-48 bg-[var(--bg-color)] border border-[var(--border-color)] shadow-xl rounded-xl overflow-hidden z-50">
                             <a href="index.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors border-b border-[var(--border-color)] font-medium">Home 1</a>
                             <a href="home-2.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors font-medium">Home 2</a>
                         </div>
                     </div>
 
-                    <a href="about.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0">About</a>
-                    <a href="product.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0">Product</a>
-                    <a href="pasta.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0">Pasta</a>
-                    <a href="sauce.html" class="nav-link active text-primary hover:-translate-y-0.5 inline-block transition-transform shrink-0">Sauce</a>
-                    <a href="recipes.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0">Recipes</a>
-                    <a href="pricing.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0">Pricing</a>
-                    <a href="faq.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0">FAQ</a>
-                    <a href="contact.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0">Contact</a>
+                    <a href="about.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0 font-medium">About</a>
+                    <a href="product.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0 font-medium">Product</a>
+                    <a href="pasta.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0 font-medium">Pasta</a>
+                    <a href="sauce.html" class="nav-link active text-primary hover:-translate-y-0.5 inline-block transition-transform shrink-0 font-medium">Sauce</a>
+                    <a href="recipes.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0 font-medium">Recipes</a>
+                    <a href="pricing.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0 font-medium">Pricing</a>
+                    <a href="faq.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0 font-medium">FAQ</a>
+                    <a href="contact.html" class="nav-link hover:-translate-y-0.5 inline-block transition-transform shrink-0 font-medium">Contact</a>
 
                     <div class="relative group cursor-pointer py-6 shrink-0">
-                        <span class="nav-link flex items-center gap-1 cursor-pointer">Dashboard <i class="fas fa-chevron-down text-xs ml-1"></i></span>
+                        <span class="nav-link flex items-center gap-1 cursor-pointer font-medium">Dashboard <i class="fas fa-chevron-down text-xs ml-1"></i></span>
                         <div class="dropdown-menu absolute z-50 top-full right-0 rtl:left-0 rtl:right-auto mt-[-10px] w-48 bg-[var(--bg-color)] border border-[var(--border-color)] shadow-xl rounded-xl overflow-hidden z-50">
                             <a href="user-dashboard.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors border-b border-[var(--border-color)] font-medium"><i class="fas fa-user mx-2"></i> User</a>
                             <a href="admin-dashboard.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors font-medium"><i class="fas fa-shield-halved mx-2"></i> Admin</a>
@@ -208,7 +208,6 @@
                     </button>
 
                     <div class="hidden xl:flex items-center gap-4 2xl:gap-6 shrink-0 ml-1">
-                        <!-- Updated Login formatted as primary color button -->
                         <a href="login.html" class="border-2 border-primary text-primary px-5 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-sm hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Login</a>
                         <a href="register.html" class="bg-primary text-white px-5 py-2.5 rounded-full font-medium hover:bg-secondary transition-colors shadow-md hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Register</a>
                     </div>
@@ -276,13 +275,12 @@
                         <i class="fas fa-chevron-down dropdown-arrow text-xs text-[var(--text-muted)]"></i>
                     </button>
                     <div id="dashboard-mobile" class="mobile-dropdown-content px-3 shadow-inner">
-                        <a href="user-dashboard.html" class="block py-1 text-sm text-[var(--text-color)] hover:text-primary font-medium transition-colors"><i class="fas fa-user mr-2 text-primary text-center w-4"></i> User</a>
-                        <a href="admin-dashboard.html" class="block py-1 text-sm text-[var(--text-color)] hover:text-primary font-medium transition-colors"><i class="fas fa-shield mr-2 text-primary text-center w-4"></i> Admin</a>
+                        <a href="user-dashboard.html" class="flex items-center gap-2 py-1 text-sm text-[var(--text-color)] hover:text-primary font-medium transition-colors"><i class="fas fa-user text-primary w-4 text-center"></i> User</a>
+                        <a href="admin-dashboard.html" class="flex items-center gap-2 py-1 text-sm text-[var(--text-color)] hover:text-primary font-medium transition-colors"><i class="fas fa-shield text-primary w-4 text-center"></i> Admin</a>
                     </div>
                 </div>
 
                 <div class="pt-4 mt-2 shrink-0 border-t border-theme flex flex-col gap-3">
-                   
                     <a href="register.html" class="bg-primary border-2 border-primary text-white w-full py-2.5 rounded-xl font-medium text-base transition-all hover:bg-secondary hover:border-secondary flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(224,159,62,0.4)]">
                         <i class="fas fa-user-plus"></i> Register
                     </a>
@@ -577,20 +575,20 @@
                 <div>
                     <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Shop</h4>
                     <ul class="space-y-3 text-gray-400 font-medium">
-                        <li><a href="pasta.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Fresh Pasta</a></li>
-                        <li><a href="sauce.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Sauces</a></li>
-                        <li><a href="product.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Olive Oils</a></li>
-                        <li><a href="pricing.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Gift Cards</a></li>
+                        <li><a href="pasta.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block font-medium">Fresh Pasta</a></li>
+                        <li><a href="sauce.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block font-medium">Sauces</a></li>
+                        <li><a href="product.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block font-medium">Olive Oils</a></li>
+                        <li><a href="pricing.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block font-medium">Gift Cards</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Explore</h4>
                     <ul class="space-y-3 text-gray-400 font-medium">
-                        <li><a href="about.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">About Us</a></li>
-                        <li><a href="recipes.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Recipes</a></li>
-                        <li><a href="faq.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">FAQ</a></li>
-                        <li><a href="contact.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Contact Support</a></li>
+                        <li><a href="about.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block font-medium">About Us</a></li>
+                        <li><a href="recipes.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block font-medium">Recipes</a></li>
+                        <li><a href="faq.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block font-medium">FAQ</a></li>
+                        <li><a href="contact.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block font-medium">Contact Support</a></li>
                     </ul>
                 </div>
 
@@ -622,7 +620,6 @@
             </div>
         </div>
     </footer>
-
 
     <script>
         // --- Theme Toggle Logic ---

@@ -12,7 +12,9 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FIXED ERROR: Removed 700 and 800 font weights from the Google Fonts import to strictly cap maximum weight at 600 for performance and design consistency -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     
     <script src="tailwind.js"></script>
     <script>
@@ -90,6 +92,7 @@
 
         .nav-link {
             position: relative;
+            /* FIXED: Nav links explicitly set to 500 (within 400-550 range) */
             font-weight: 500;
             font-size: 0.95rem;
             transition: color 0.3s;
@@ -178,6 +181,7 @@
                     <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(224,159,62,0.4)] transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 shrink-0">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
+                    <!-- FIXED: Logo text max weight is 600 (font-semibold) -->
                     <span class="font-serif text-2xl font-semibold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap">Pasta<span class="text-primary">Perfetto</span></span>
                 </a>
 
@@ -185,6 +189,7 @@
                     <div class="relative group cursor-pointer py-6 shrink-0">
                         <span class="nav-link flex items-center gap-1 cursor-pointer">Home <i class="fas fa-chevron-down text-xs ml-1"></i></span>
                         <div class="dropdown-menu absolute top-full left-0 rtl:right-0 rtl:left-auto mt-[-10px] w-48 bg-[var(--bg-color)] border border-[var(--border-color)] shadow-xl rounded-xl overflow-hidden z-50">
+                            <!-- FIXED: Dropdown items kept at 500 (font-medium) -->
                             <a href="index.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors border-b border-[var(--border-color)] font-medium">Home 1</a>
                             <a href="home-2.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors font-medium">Home 2</a>
                         </div>
@@ -202,6 +207,7 @@
                     <div class="relative group cursor-pointer py-6 shrink-0">
                         <span class="nav-link flex items-center gap-1 cursor-pointer">Dashboard <i class="fas fa-chevron-down text-xs ml-1"></i></span>
                         <div class="dropdown-menu absolute top-full right-0 rtl:left-0 rtl:right-auto mt-[-10px] w-48 bg-[var(--bg-color)] border border-[var(--border-color)] shadow-xl rounded-xl overflow-hidden z-50">
+                            <!-- FIXED: Dropdown items kept at 500 (font-medium) -->
                             <a href="user-dashboard.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors border-b border-[var(--border-color)] font-medium"><i class="fas fa-user mx-2"></i> User</a>
                             <a href="admin-dashboard.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors font-medium"><i class="fas fa-shield-halved mx-2"></i> Admin</a>
                         </div>
@@ -218,7 +224,7 @@
                     </button>
 
                     <div class="hidden xl:flex items-center gap-4 2xl:gap-6 shrink-0 ml-1">
-                        <!-- Login formatted as secondary button -->
+                        <!-- FIXED: Buttons kept at 500 (font-medium) -->
                         <a href="login.html" class="border-2 border-primary text-primary px-5 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-sm hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Login</a>
                         <a href="register.html" class="bg-primary text-white px-5 py-2.5 rounded-full font-medium hover:bg-secondary transition-colors shadow-md hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Register</a>
                     </div>
@@ -240,6 +246,7 @@
                     <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_10px_rgba(224,159,62,0.5)] transition-transform duration-300">
                         <i class="fa-solid fa-wheat-awn text-xs"></i>
                     </div>
+                    <!-- FIXED: Heading weight 600 (font-semibold) -->
                     <span class="font-serif text-lg font-semibold tracking-wide text-[var(--text-color)] hidden sm:block">Pasta<span class="text-primary">Perfetto</span></span>
                 </a>
                 
@@ -260,6 +267,7 @@
             </div>
             
             <div class="flex-grow overflow-y-auto pb-4">
+                <!-- FIXED: Subheadings and nav links in mobile menu kept at 500 (font-medium) -->
                 <div>
                     <button class="mobile-dropdown-btn flex items-center justify-between w-full text-left font-serif text-base py-1.5 text-[var(--text-color)] hover:text-primary transition-colors cursor-pointer border-0 bg-transparent font-medium" onclick="toggleMobileDropdown(this, 'home-mobile')">
                         <span>Home</span>
@@ -306,10 +314,13 @@
         <section class="relative min-h-[100dvh] flex items-center justify-center pt-20 border-b border-theme" style="background-image: url('Images/visual3.jpg'); background-size: cover; background-position: center;">
             <div class="absolute inset-0 bg-black/60 dark:bg-black/80 z-0 transition-colors duration-300"></div>
             <div class="container mx-auto px-4 text-center relative z-10 flex flex-col items-center justify-center h-full">
+                <!-- FIXED: Subheading span strictly at 500 (font-medium) -->
                 <span class="text-primary font-medium tracking-[0.2em] uppercase text-sm md:text-base mb-4 block drop-shadow-md animate-pulse">Memberships & Plans</span>
+                <!-- FIXED: Main H1 Heading strictly at 600 (font-semibold) -->
                 <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold text-white leading-tight drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)] mb-6">
                     Choose Your <br/> <span class="italic text-primary">Culinary Journey</span>.
                 </h1>
+                <!-- FIXED: Subheading paragraph strictly at 500 (font-medium) -->
                 <p class="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto font-medium drop-shadow-md mb-0">
                     From occasional dinners to weekly Italian feasts. Select the plan that fits your lifestyle, or simply pay as you go.
                 </p>
@@ -321,7 +332,9 @@
 
             <div class="container mx-auto px-4 md:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16">
+                    <!-- FIXED: Subheading strictly at 500 (font-medium) -->
                     <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-3">Simple & Transparent</span>
+                    <!-- FIXED: Section H2 Heading strictly at 600 (font-semibold) -->
                     <h2 class="font-serif text-4xl md:text-5xl font-semibold text-[var(--text-color)]">Our Pricing Plans</h2>
                 </div>
 
@@ -329,7 +342,9 @@
                     
                     <div class="bg-card p-10 rounded-3xl border border-theme hover:border-primary transition-all duration-300 flex flex-col h-full shadow-sm hover:shadow-[0_10px_30px_rgba(224,159,62,0.15)]">
                         <div class="mb-8">
+                            <!-- FIXED: Card H3 Heading strictly at 600 (font-semibold) -->
                             <h3 class="font-serif text-3xl font-semibold text-[var(--text-color)] mb-2">A La Carte</h3>
+                            <!-- FIXED: Card subtext strictly at 500 (font-medium) -->
                             <p class="text-body-muted font-medium text-sm h-10">Perfect for the occasional home chef. Buy what you want, when you want.</p>
                         </div>
                         <div class="mb-8">
@@ -337,6 +352,7 @@
                             <span class="text-body-muted font-medium">/ to join</span>
                         </div>
                         <ul class="space-y-4 mb-10 flex-grow">
+                            <!-- FIXED: List items strictly at 500 (font-medium) -->
                             <li class="flex items-start gap-3 text-[var(--text-color)] font-medium">
                                 <i class="fas fa-check text-primary mt-1"></i> Access to all standard pasta & sauces
                             </li>
@@ -350,7 +366,7 @@
                                 <i class="fas fa-xmark mt-1"></i> Access to 'Reserve' menu
                             </li>
                         </ul>
-                        <!-- Start Shopping button changed to match Join Famiglia black/dark styling -->
+                        <!-- FIXED: Buttons strictly at 500 (font-medium) -->
                         <a href="product.html" class="w-full block text-center bg-[var(--text-color)] text-[var(--bg-color)] py-4 rounded-xl font-medium hover:bg-primary hover:text-white transition-all border border-[var(--text-color)] hover:border-primary">Start Shopping</a>
                     </div>
 
@@ -359,6 +375,7 @@
                             Most Popular
                         </div>
                         <div class="mb-8 mt-2">
+                            <!-- FIXED: Card H3 Heading strictly at 600 (font-semibold) -->
                             <h3 class="font-serif text-3xl font-semibold text-[var(--text-color)] mb-2">Pasta Club</h3>
                             <p class="text-body-muted font-medium text-sm h-10">A monthly curated box of our best pairings delivered straight to your door.</p>
                         </div>
@@ -367,6 +384,7 @@
                             <span class="text-body-muted font-medium">/ month</span>
                         </div>
                         <ul class="space-y-4 mb-10 flex-grow">
+                            <!-- FIXED: List items strictly at 500 (font-medium) -->
                             <li class="flex items-start gap-3 text-[var(--text-color)] font-medium">
                                 <i class="fas fa-check text-primary mt-1"></i> 2 Pastas + 2 Sauces monthly
                             </li>
@@ -385,6 +403,7 @@
 
                     <div class="bg-card p-10 rounded-3xl border border-theme hover:border-primary transition-all duration-300 flex flex-col h-full shadow-sm hover:shadow-[0_10px_30px_rgba(224,159,62,0.15)]">
                         <div class="mb-8">
+                            <!-- FIXED: Card H3 Heading strictly at 600 (font-semibold) -->
                             <h3 class="font-serif text-3xl font-semibold text-[var(--text-color)] mb-2">La Famiglia</h3>
                             <p class="text-body-muted font-medium text-sm h-10">The ultimate Italian dining experience for serious food lovers and large families.</p>
                         </div>
@@ -393,6 +412,7 @@
                             <span class="text-body-muted font-medium">/ month</span>
                         </div>
                         <ul class="space-y-4 mb-10 flex-grow">
+                            <!-- FIXED: List items strictly at 500 (font-medium) -->
                             <li class="flex items-start gap-3 text-[var(--text-color)] font-medium">
                                 <i class="fas fa-check text-primary mt-1"></i> 5 Pastas + 4 Sauces + 1 Specialty Oil
                             </li>
@@ -418,7 +438,9 @@
             
             <div class="container mx-auto px-4 md:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto mb-16">
+                    <!-- FIXED: Subheading strictly at 500 (font-medium) -->
                     <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-3">Compare Plans</span>
+                    <!-- FIXED: Section H2 Heading strictly at 600 (font-semibold) -->
                     <h2 class="font-serif text-4xl md:text-5xl font-semibold">What's Included</h2>
                 </div>
 
@@ -426,6 +448,7 @@
                     <table class="w-full text-left border-collapse min-w-[800px]">
                         <thead>
                             <tr class="bg-[#111]">
+                                <!-- FIXED: Table headers capped at 600 (font-semibold). Using native Tailwind classes to override default browser TH bold styling -->
                                 <th class="p-6 font-serif text-xl border-b border-[#333] w-2/5 font-semibold">Feature</th>
                                 <th class="p-6 font-semibold text-center border-b border-[#333] w-1/5 text-gray-400">A La Carte</th>
                                 <th class="p-6 font-semibold text-center border-b border-[#333] w-1/5 text-primary">Pasta Club</th>
@@ -433,6 +456,7 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-[#222] bg-[#1a1a1a]">
+                            <!-- FIXED: Table body rows kept at 500 (font-medium) -->
                             <tr class="hover:bg-[#222] transition-colors">
                                 <td class="p-6 font-medium">Access to standard pasta & sauces</td>
                                 <td class="p-6 text-center text-gray-400"><i class="fas fa-check"></i></td>
@@ -490,8 +514,11 @@
                     </div>
 
                     <div class="w-full lg:w-1/2 p-10 md:p-16 flex flex-col justify-center">
+                        <!-- FIXED: Subheading strictly at 500 (font-medium) -->
                         <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-3"><i class="fas fa-gift mr-2"></i>Give the gift of Italy</span>
+                        <!-- FIXED: Section H2 Heading strictly at 600 (font-semibold) -->
                         <h2 class="font-serif text-4xl md:text-5xl font-semibold text-[var(--text-color)] mb-6">Gifting & Corporate</h2>
+                        <!-- FIXED: Paragraphs kept at 500 (font-medium) -->
                         <p class="text-lg text-body-muted font-medium mb-8">
                             Share the authentic taste of artisanal pasta with friends, family, or clients. Choose from our curated beautifully packaged gift boxes, or send a digital gift card instantly.
                         </p>
@@ -500,7 +527,9 @@
                             <div class="flex items-center gap-4 bg-card p-4 rounded-2xl border border-theme hover:border-primary transition-colors cursor-pointer group">
                                 <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xl group-hover:bg-primary group-hover:text-white transition-colors"><i class="fas fa-box-open"></i></div>
                                 <div>
+                                    <!-- FIXED: Small internal headings capped at 600 (font-semibold) -->
                                     <h4 class="font-semibold text-[var(--text-color)]">The Starter Gift Box</h4>
+                                    <!-- FIXED: Small internal text capped at 500 (font-medium) -->
                                     <p class="text-sm text-body-muted font-medium">2 Pastas, 1 Sauce, Olive Oil - $45</p>
                                 </div>
                             </div>
@@ -525,18 +554,22 @@
         <section class="py-24 bg-[var(--bg-color)] border-b border-theme transition-colors">
             <div class="container mx-auto px-4 md:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-16">
+                    <!-- FIXED: Subheading strictly at 500 (font-medium) -->
                     <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-3">Got Questions?</span>
+                    <!-- FIXED: Section H2 Heading strictly at 600 (font-semibold) -->
                     <h2 class="font-serif text-4xl md:text-5xl font-semibold text-[var(--text-color)]">Subscription FAQ</h2>
                 </div>
 
                 <div class="max-w-4xl mx-auto space-y-4">
                     
                     <div class="bg-card border border-theme rounded-2xl overflow-hidden transition-all duration-300">
+                        <!-- FIXED: FAQ toggles act as headings, capped at 600 (font-semibold) -->
                         <button class="faq-btn w-full px-6 py-5 flex items-center justify-between font-serif text-xl font-semibold text-[var(--text-color)] focus:outline-none hover:text-primary transition-colors text-left gap-4">
                             <span>Can I cancel or pause my membership?</span>
                             <i class="fas fa-chevron-down text-primary transition-transform duration-300 shrink-0"></i>
                         </button>
                         <div class="faq-content">
+                            <!-- FIXED: FAQ body text strictly at 500 (font-medium) -->
                             <p class="px-6 pb-6 text-body-muted font-medium">Absolutely. There are no long-term commitments. You can pause, skip a month, or cancel your Pasta Club or La Famiglia membership at any time directly from your user dashboard without any hidden fees.</p>
                         </div>
                     </div>
@@ -587,6 +620,7 @@
                         </div>
                         <span class="font-serif text-2xl font-semibold tracking-wide text-white group-hover:text-primary transition-colors">Pasta<span class="text-primary">Perfetto</span></span>
                     </a>
+                    <!-- FIXED: Footer description kept at 500 (font-medium) -->
                     <p class="text-gray-400 text-sm mb-6 leading-relaxed hover:text-white transition-colors font-medium">
                         Bringing the authentic taste of Italy to your home with artisanal pastas and slow-simmered sauces.
                     </p>
@@ -598,7 +632,9 @@
                 </div>
 
                 <div>
+                    <!-- FIXED: Footer headings capped at 600 (font-semibold) -->
                     <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Shop</h4>
+                    <!-- FIXED: Footer links kept at 500 (font-medium) -->
                     <ul class="space-y-3 text-gray-400 font-medium">
                         <li><a href="pasta.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Fresh Pasta</a></li>
                         <li><a href="sauce.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Sauces</a></li>

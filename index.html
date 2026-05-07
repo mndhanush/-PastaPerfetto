@@ -12,7 +12,8 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- ENSURING GLOBAL LIMITS: Only weights 400, 500, and 600 are fetched. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     
     <script src="tailwind.js"></script>
     <script>
@@ -69,11 +70,16 @@
             --hover-highlight: #E09F3E;
         }
 
+        /* 
+          BASE RULE: Setting baseline font-weight to 400 (normal) 
+          This ensures all unclassed text naturally stays within your subheading limits.
+        */
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
             transition: background-color 0.3s ease, color 0.3s ease;
             overflow-x: hidden;
+            font-weight: 400; 
         }
 
         .text-body-muted { color: var(--text-muted); transition: color 0.3s ease; }
@@ -88,6 +94,7 @@
             border-bottom: 1px solid var(--border-color);
         }
 
+        /* RULE: Navigation links sit at 500 (medium) */
         .nav-link {
             position: relative;
             font-weight: 500;
@@ -159,7 +166,7 @@
 
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased font-normal">
 
     <nav class="fixed w-full top-0 z-[100] glass-nav transition-all duration-300">
         <div class="container mx-auto px-4 md:px-6 lg:px-8">
@@ -169,6 +176,7 @@
                     <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white shadow-[0_0_15px_rgba(224,159,62,0.4)] transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 shrink-0">
                         <i class="fa-solid fa-wheat-awn"></i>
                     </div>
+                    <!-- HEADING WEIGHT ENFORCED: font-semibold applies exactly 600 weight. No font-bold (700) used. -->
                     <span class="font-serif text-2xl font-semibold tracking-wide transition-colors group-hover:text-primary whitespace-nowrap">Pasta<span class="text-primary">Perfetto</span></span>
                 </a>
 
@@ -176,7 +184,7 @@
                     <div class="relative group cursor-pointer py-6 shrink-0">
                         <span class="nav-link active text-primary flex items-center gap-1">Home <i class="fas fa-chevron-down text-xs ml-1"></i></span>
                         <div class="dropdown-menu absolute z-50 top-full ltr:left-0 rtl:right-0 mt-[-10px] w-48 bg-[var(--bg-color)] border border-[var(--border-color)] shadow-xl rounded-xl overflow-hidden">
-                            <a href="index.html" class="block px-4 py-3 text-primary hover:bg-primary hover:text-white transition-colors border-b border-[var(--border-color)] font-semibold">Home 1</a>
+                            <a href="index.html" class="block px-4 py-3 text-primary hover:bg-primary hover:text-white transition-colors border-b border-[var(--border-color)] font-medium">Home 1</a>
                             <a href="home-2.html" class="block px-4 py-3 text-[var(--text-color)] hover:bg-primary hover:text-white transition-colors font-medium">Home 2</a>
                         </div>
                     </div>
@@ -200,7 +208,7 @@
                 </div>
 
                 <div class="flex items-center gap-3 xl:gap-5 2xl:gap-8 shrink-0">
-                    <button class="rtl-toggle-btn hidden xl:flex w-10 h-10 shrink-0 rounded-full items-center justify-center border border-[var(--border-color)] hover:bg-primary hover:text-white hover:border-primary transition-all font-semibold text-xs hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] text-[var(--text-color)]">
+                    <button class="rtl-toggle-btn hidden xl:flex w-10 h-10 shrink-0 rounded-full items-center justify-center border border-[var(--border-color)] hover:bg-primary hover:text-white hover:border-primary transition-all font-medium text-xs hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] text-[var(--text-color)]">
                         RTL
                     </button>
 
@@ -209,9 +217,8 @@
                     </button>
 
                     <div class="hidden xl:flex items-center gap-4 2xl:gap-6 shrink-0 ml-1">
-                        <!-- Updated Login formatted as primary secondary button -->
+                        <!-- SUBHEADING/BUTTON WEIGHT ENFORCED: font-medium = 500. -->
                         <a href="login.html" class="border-2 border-primary text-primary px-5 py-2 rounded-full font-medium hover:bg-primary hover:text-white transition-colors shadow-sm hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Login</a>
-                        
                         <a href="register.html" class="bg-primary text-white px-5 py-2.5 rounded-full font-medium hover:bg-secondary transition-colors shadow-md hover:shadow-[0_0_15px_rgba(224,159,62,0.5)] transform hover:-translate-y-0.5 duration-200 whitespace-nowrap">Register</a>
                     </div>
 
@@ -236,7 +243,7 @@
                 </a>
                 
                 <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-                    <button class="rtl-toggle-btn w-8 h-8 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[10px] font-semibold text-[var(--text-color)] hover:bg-primary hover:text-white hover:border-primary transition-colors shadow-sm">
+                    <button class="rtl-toggle-btn w-8 h-8 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[10px] font-medium text-[var(--text-color)] hover:bg-primary hover:text-white hover:border-primary transition-colors shadow-sm">
                         RTL
                     </button>
                     <button class="theme-toggle w-8 h-8 rounded-full border border-[var(--border-color)] flex items-center justify-center text-[var(--text-color)] hover:bg-primary hover:text-white hover:border-primary transition-colors shadow-sm">
@@ -284,7 +291,6 @@
                 </div>
 
                 <div class="pt-4 mt-2 shrink-0 border-t border-theme flex flex-col gap-3">
-                    
                     <a href="register.html" class="bg-primary border-2 border-primary text-white w-full py-2.5 rounded-xl font-medium text-base transition-all hover:bg-secondary hover:border-secondary flex items-center justify-center gap-2 shadow-[0_4px_15px_rgba(224,159,62,0.4)]">
                         <i class="fas fa-user-plus"></i> Register 
                     </a>
@@ -299,13 +305,19 @@
         <section class="relative h-screen min-h-[600px] flex items-center justify-center pt-20" style="background-image: url('Images/pasta\ hero1.jpg'); background-size: cover; background-position: center;">
             <div class="absolute inset-0 bg-black/40 dark:bg-black/70 z-0 transition-colors duration-300"></div>
             <div class="container mx-auto px-4 text-center relative z-10">
+                <!-- SUBHEADING WEIGHT ENFORCED: font-medium applies exactly 500 weight. -->
                 <span class="text-primary font-medium tracking-[0.2em] uppercase text-sm md:text-base mb-4 block drop-shadow-md animate-pulse">Since 1985</span>
+                
+                <!-- HEADING WEIGHT ENFORCED: font-semibold applies exactly 600 weight. -->
                 <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-semibold text-white mb-6 leading-tight drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:scale-105">
                     Crafted Like <br/> <span class="italic text-primary">in Italy</span>
                 </h1>
+                
+                <!-- SUBHEADING WEIGHT ENFORCED: font-medium applies exactly 500 weight. -->
                 <p class="text-lg md:text-2xl text-gray-200 mb-10 max-w-2xl mx-auto font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                     Artisanal pasta and slow-simmered sauces, delivered fresh from our kitchen to your table.
                 </p>
+                
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="product.html" class="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-full font-medium text-lg hover:bg-secondary transition-colors shadow-[0_0_20px_rgba(224,159,62,0.6)] hover:-translate-y-1 transform duration-300">
                         Shop Pasta
@@ -323,12 +335,17 @@
                     
                     <div class="w-full lg:w-5/12 space-y-8 flex flex-col items-center lg:items-center text-center">
                         <div class="w-full">
+                            <!-- SUBHEADING WEIGHT ENFORCED -->
                             <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-2 transition-colors text-center">Our Heritage</span>
+                            <!-- HEADING WEIGHT ENFORCED: max 600 -->
                             <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight text-[var(--text-color)] transition-colors text-center w-full">The Art of <br/><span class="text-primary italic">Pasta Making</span></h2>
                         </div>
+                        
+                        <!-- PARAGRAPH WEIGHT ENFORCED: 500 -->
                         <p class="text-lg text-body-muted leading-relaxed group-hover:text-[var(--text-color)] transition-colors duration-300 font-medium">
                             Every ribbon, tube, and sheet we create is born from a legacy of slow living. We blend ancient grains with modern precision, ensuring every bite carries the rustic soul of the Italian countryside right into your home.
                         </p>
+                        
                         <ul class="space-y-4 w-full flex flex-col items-center">
                             <li class="flex items-center gap-4 text-body-muted hover:text-primary transition-colors group/item cursor-default">
                                 <div class="w-10 h-10 rounded-full bg-[var(--bg-color)] flex items-center justify-center text-primary border border-primary group-hover/item:bg-primary group-hover/item:text-white transition-all shadow-md group-hover/item:shadow-[0_0_15px_rgba(224,159,62,0.5)] shrink-0"><i class="fas fa-droplet"></i></div>
@@ -367,7 +384,8 @@
                                     <div class="absolute inset-0 bg-black/40 z-10 transition-opacity duration-300 group-hover/img:opacity-10"></div>
                                     <img src="Images/Art4.jpg" alt="Flour Dusting" class="w-full h-full object-cover transition-transform duration-700 group-hover/img:scale-110">
                                     <div class="absolute bottom-6 left-6 z-20">
-                                        <p class="text-white font-serif italic text-2xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">"Fatto a mano"</p>
+                                        <!-- TEXT WEIGHT ENFORCED: 500 -->
+                                        <p class="text-white font-serif italic text-2xl font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">"Fatto a mano"</p>
                                     </div>
                                 </div>
                             </div>
@@ -381,6 +399,7 @@
         <section class="py-20 bg-[var(--bg-color)] border-b border-theme transition-colors">
             <div class="container mx-auto px-4 text-center flex flex-col items-center">
                 <span class="text-primary font-medium tracking-widest uppercase text-sm block mb-2 transition-colors cursor-default text-center">Simplicity</span>
+                <!-- HEADING WEIGHT ENFORCED: max 600 -->
                 <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold mb-16 leading-tight text-[var(--text-color)] transition-colors text-center w-full">How It Works</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative w-full">
@@ -540,6 +559,7 @@
                 </div>
 
                 <div>
+                    <!-- FOOTER HEADING WEIGHT ENFORCED: max 600 -->
                     <h4 class="font-semibold text-lg mb-6 text-primary tracking-wide uppercase text-sm drop-shadow-sm">Shop</h4>
                     <ul class="space-y-3 text-gray-400 font-medium">
                         <li><a href="pasta.html" class="hover:text-primary hover:translate-x-2 transition-all inline-block">Fresh Pasta</a></li>
